@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ArizaKaydiDBModelStoreContainer" CdmEntityContainer="IssuSiparisDBEntities">
+    <EntitySetMapping Name="ArizaKaydi">
+      <EntityTypeMapping TypeName="ArizaKaydiDBModel.ArizaKaydi">
+        <MappingFragment StoreEntitySet="ArizaKaydi">
+          <ScalarProperty Name="ArizaiID" ColumnName="ArizaiID" />
+          <ScalarProperty Name="BargeID" ColumnName="BargeID" />
+          <ScalarProperty Name="Baslangic" ColumnName="Baslangic" />
+          <ScalarProperty Name="Bitis" ColumnName="Bitis" />
+          <ScalarProperty Name="KayitTarihi" ColumnName="KayitTarihi" />
+          <ScalarProperty Name="DegisiklikTarihi" ColumnName="DegisiklikTarihi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Barge">
+      <EntityTypeMapping TypeName="ArizaKaydiDBModel.Barge">
+        <MappingFragment StoreEntitySet="Barge">
+          <ScalarProperty Name="BargeID" ColumnName="BargeID" />
+          <ScalarProperty Name="GemiAdi" ColumnName="GemiAdi" />
+          <ScalarProperty Name="BargeKodu" ColumnName="BargeKodu" />
+          <ScalarProperty Name="SiraNo" ColumnName="SiraNo" />
+          <ScalarProperty Name="YakitKapasite" ColumnName="YakitKapasite" />
+          <ScalarProperty Name="HarcamaSuBasarken" ColumnName="HarcamaSuBasarken" />
+          <ScalarProperty Name="HarcamaSeyir" ColumnName="HarcamaSeyir" />
+          <ScalarProperty Name="HarcamaBekleme" ColumnName="HarcamaBekleme" />
+          <ScalarProperty Name="YakitMevcudu" ColumnName="YakitMevcudu" />
+          <ScalarProperty Name="Tonaj" ColumnName="Tonaj" />
+          <ScalarProperty Name="SuMevcudu" ColumnName="SuMevcudu" />
+          <ScalarProperty Name="Saat1Baslangic" ColumnName="Saat1Baslangic" />
+          <ScalarProperty Name="Saat1Bitis" ColumnName="Saat1Bitis" />
+          <ScalarProperty Name="Saat2Baslangic" ColumnName="Saat2Baslangic" />
+          <ScalarProperty Name="Saat2Bitis" ColumnName="Saat2Bitis" />
+          <ScalarProperty Name="Saat3Baslangic" ColumnName="Saat3Baslangic" />
+          <ScalarProperty Name="Saat3Bitis" ColumnName="Saat3Bitis" />
+          <ScalarProperty Name="Saat4Baslangic" ColumnName="Saat4Baslangic" />
+          <ScalarProperty Name="Saat4Bitis" ColumnName="Saat4Bitis" />
+          <ScalarProperty Name="Durumu" ColumnName="Durumu" />
+          <ScalarProperty Name="Mevkii" ColumnName="Mevkii" />
+          <ScalarProperty Name="KayitTarihi" ColumnName="KayitTarihi" />
+          <ScalarProperty Name="DegisiklikTarihi" ColumnName="DegisiklikTarihi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

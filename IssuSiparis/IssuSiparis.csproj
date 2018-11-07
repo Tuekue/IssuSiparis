@@ -1,0 +1,910 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{80222B0A-E55F-4D9C-8A7B-5E989A2446F0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IssuSiparis</RootNamespace>
+    <AssemblyName>IssuSiparis</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>sailor.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>IssuSiparis.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AylikSatislar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AylikSatislar.Designer.cs">
+      <DependentUpon>AylikSatislar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BargeListDataSet.cs">
+      <DependentUpon>BargeListDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="dbsDevresiBozuk.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbsDevresiBozuk.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbsKaraListe.cs">
+      <DependentUpon>dbsKaraListe.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="dbsNakitOdemeListe.cs">
+      <DependentUpon>dbsNakitOdemeListe.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DolumSayacListeDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DolumSayacListeDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsDestinasyon.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsDestinasyon.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsTeslimEkstra.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsTeslimEkstra.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsTeslimEkstraListe.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsTeslimEkstraListe.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="fBargeFisi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fBargeFisi.Designer.cs">
+      <DependentUpon>fBargeFisi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fDestinasyon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fDestinasyon.Designer.cs">
+      <DependentUpon>fDestinasyon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fDevresiBozukRapor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fDevresiBozukRapor.Designer.cs">
+      <DependentUpon>fDevresiBozukRapor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fErtesiGuneAktar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fErtesiGuneAktar.Designer.cs">
+      <DependentUpon>fErtesiGuneAktar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fGemiArizaGirisi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fGemiArizaGirisi.Designer.cs">
+      <DependentUpon>fGemiArizaGirisi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fGemidenGemiyeIkmalListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fGemidenGemiyeIkmalListesi.Designer.cs">
+      <DependentUpon>fGemidenGemiyeIkmalListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fGemiEvrakTarihi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fGemiEvrakTarihi.Designer.cs">
+      <DependentUpon>fGemiEvrakTarihi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fGemilerinYillikSatislari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fGemilerinYillikSatislari.Designer.cs">
+      <DependentUpon>fGemilerinYillikSatislari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dbsDolumSayaclari.cs">
+      <DependentUpon>dbsDolumSayaclari.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="dbsDolumSayaclari.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbsDolumSayaclari.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbsKaraListe.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbsKaraListe.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbsNakitOdemeListe.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbsNakitOdemeListe.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsGunlukToplamlar.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsGunlukToplamlar.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="fBargeBilgi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fBargeBilgi.Designer.cs">
+      <DependentUpon>fBargeBilgi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fDevresiBozukGemi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fDevresiBozukGemi.Designer.cs">
+      <DependentUpon>fDevresiBozukGemi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fDolumSayaclari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fDolumSayaclari.Designer.cs">
+      <DependentUpon>fDolumSayaclari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fGunlukNot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fGunlukNot.Designer.cs">
+      <DependentUpon>fGunlukNot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fGunlukRapor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fGunlukRapor.Designer.cs">
+      <DependentUpon>fGunlukRapor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Filllers.cs" />
+    <Compile Include="FingerPrint.cs" />
+    <Compile Include="fKaraListe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fKaraListe.Designer.cs">
+      <DependentUpon>fKaraListe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fNakitOdeme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fNakitOdeme.Designer.cs">
+      <DependentUpon>fNakitOdeme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fNakitOdemeRapor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fNakitOdemeRapor.Designer.cs">
+      <DependentUpon>fNakitOdemeRapor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fRakipBilgileri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fRakipBilgileri.Designer.cs">
+      <DependentUpon>fRakipBilgileri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fRakipBilgileriRapor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fRakipBilgileriRapor.Designer.cs">
+      <DependentUpon>fRakipBilgileriRapor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fKaraListeRapor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fKaraListeRapor.Designer.cs">
+      <DependentUpon>fKaraListeRapor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fSayacDolumListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fSayacDolumListesi.Designer.cs">
+      <DependentUpon>fSayacDolumListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fSplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fSplashScreen.Designer.cs">
+      <DependentUpon>fSplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fSuDolum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fSuDolum.Designer.cs">
+      <DependentUpon>fSuDolum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fTeslimEkstraRapor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fTeslimEkstraRapor.Designer.cs">
+      <DependentUpon>fTeslimEkstraRapor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fTeslimFisi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fTeslimFisi.Designer.cs">
+      <DependentUpon>fTeslimFisi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dbsRandevulu.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbsRandevulu.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbsSiparis.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbsSiparis.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbsTakipte.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbsTakipte.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbsTeslimEdilmis.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbsTeslimEdilmis.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="fAramaGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fAramaGiris.Designer.cs">
+      <DependentUpon>fAramaGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fSiparis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fSiparis.Designer.cs">
+      <DependentUpon>fSiparis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BargeListDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BargeListDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="fTakip2Randevu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fTakip2Randevu.Designer.cs">
+      <DependentUpon>fTakip2Randevu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fTumGemilerinSatislari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fTumGemilerinSatislari.Designer.cs">
+      <DependentUpon>fTumGemilerinSatislari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fTumGemilerinSatislariYillik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fTumGemilerinSatislariYillik.Designer.cs">
+      <DependentUpon>fTumGemilerinSatislariYillik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fYakitDolum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fYakitDolum.Designer.cs">
+      <DependentUpon>fYakitDolum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fYakitListe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fYakitListe.Designer.cs">
+      <DependentUpon>fYakitListe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GemidenGemiyeListesi.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GemidenGemiyeListesi.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GercekDataDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GercekDataDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GunlukRaporDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GunlukRaporDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="IssuSiparisDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IssuSiparisDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="IssuSiparisDBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IssuSiparisDBDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ModifyRegistry.cs" />
+    <Compile Include="PasswordHash.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="prRakipListesi.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>prRakipListesi.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RakipListesi.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RakipListesi.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="YakitDolumListeDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>YakitDolumListeDS.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AylikSatislar.resx">
+      <DependentUpon>AylikSatislar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fBargeFisi.resx">
+      <DependentUpon>fBargeFisi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fDestinasyon.resx">
+      <DependentUpon>fDestinasyon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fDevresiBozukRapor.resx">
+      <DependentUpon>fDevresiBozukRapor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fErtesiGuneAktar.resx">
+      <DependentUpon>fErtesiGuneAktar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fGemiArizaGirisi.resx">
+      <DependentUpon>fGemiArizaGirisi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fGemidenGemiyeIkmalListesi.resx">
+      <DependentUpon>fGemidenGemiyeIkmalListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fGemiEvrakTarihi.resx">
+      <DependentUpon>fGemiEvrakTarihi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fGemilerinYillikSatislari.resx">
+      <DependentUpon>fGemilerinYillikSatislari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fBargeBilgi.resx">
+      <DependentUpon>fBargeBilgi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fDevresiBozukGemi.resx">
+      <DependentUpon>fDevresiBozukGemi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fDolumSayaclari.resx">
+      <DependentUpon>fDolumSayaclari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fGunlukNot.resx">
+      <DependentUpon>fGunlukNot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fGunlukRapor.resx">
+      <DependentUpon>fGunlukRapor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fKaraListe.resx">
+      <DependentUpon>fKaraListe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fNakitOdeme.resx">
+      <DependentUpon>fNakitOdeme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fNakitOdemeRapor.resx">
+      <DependentUpon>fNakitOdemeRapor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fRakipBilgileri.resx">
+      <DependentUpon>fRakipBilgileri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fKaraListeRapor.resx">
+      <DependentUpon>fKaraListeRapor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fRakipBilgileriRapor.resx">
+      <DependentUpon>fRakipBilgileriRapor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fSayacDolumListesi.resx">
+      <DependentUpon>fSayacDolumListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fSplashScreen.resx">
+      <DependentUpon>fSplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fSuDolum.resx">
+      <DependentUpon>fSuDolum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fTeslimEkstraRapor.resx">
+      <DependentUpon>fTeslimEkstraRapor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fTeslimFisi.resx">
+      <DependentUpon>fTeslimFisi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fAramaGiris.resx">
+      <DependentUpon>fAramaGiris.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fSiparis.resx">
+      <DependentUpon>fSiparis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fTakip2Randevu.resx">
+      <DependentUpon>fTakip2Randevu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fTumGemilerinSatislari.resx">
+      <DependentUpon>fTumGemilerinSatislari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fTumGemilerinSatislariYillik.resx">
+      <DependentUpon>fTumGemilerinSatislariYillik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fYakitDolum.resx">
+      <DependentUpon>fYakitDolum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fYakitListe.resx">
+      <DependentUpon>fYakitListe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report4.rdlc" />
+    <EmbeddedResource Include="Reports\DolumSayacListesi.rdlc" />
+    <EmbeddedResource Include="Reports\GemidenGemiyeIkmalListesi.rdlc" />
+    <EmbeddedResource Include="Reports\NakitOdemeRaporu.rdlc" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="Report3.rdlc" />
+    <EmbeddedResource Include="Reports\DevresiBozukRapor.rdlc" />
+    <EmbeddedResource Include="Reports\RakipBilgileriListesi.rdlc" />
+    <EmbeddedResource Include="Reports\Report1.rdlc" />
+    <EmbeddedResource Include="Reports\Report2.rdlc" />
+    <EmbeddedResource Include="Reports\TeslimEkstra.rdlc" />
+    <EmbeddedResource Include="Reports\YakitDolumListesi.rdlc" />
+    <None Include="app.config" />
+    <None Include="BargeListDataSet.xsc">
+      <DependentUpon>BargeListDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BargeListDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BargeListDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BargeListDataSet.xss">
+      <DependentUpon>BargeListDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dbsDevresiBozuk.xsc">
+      <DependentUpon>dbsDevresiBozuk.xsd</DependentUpon>
+    </None>
+    <None Include="dbsDevresiBozuk.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbsDevresiBozuk.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbsDevresiBozuk.xss">
+      <DependentUpon>dbsDevresiBozuk.xsd</DependentUpon>
+    </None>
+    <None Include="dbsDolumSayaclari.xsc">
+      <DependentUpon>dbsDolumSayaclari.xsd</DependentUpon>
+    </None>
+    <None Include="dbsDolumSayaclari.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbsDolumSayaclari.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbsDolumSayaclari.xss">
+      <DependentUpon>dbsDolumSayaclari.xsd</DependentUpon>
+    </None>
+    <None Include="dbsKaraListe.xsc">
+      <DependentUpon>dbsKaraListe.xsd</DependentUpon>
+    </None>
+    <None Include="dbsKaraListe.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbsKaraListe.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbsKaraListe.xss">
+      <DependentUpon>dbsKaraListe.xsd</DependentUpon>
+    </None>
+    <None Include="dbsNakitOdemeListe.xsc">
+      <DependentUpon>dbsNakitOdemeListe.xsd</DependentUpon>
+    </None>
+    <None Include="dbsNakitOdemeListe.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbsNakitOdemeListe.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbsNakitOdemeListe.xss">
+      <DependentUpon>dbsNakitOdemeListe.xsd</DependentUpon>
+    </None>
+    <None Include="dbsRandevulu.xsc">
+      <DependentUpon>dbsRandevulu.xsd</DependentUpon>
+    </None>
+    <None Include="dbsRandevulu.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbsRandevulu.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbsRandevulu.xss">
+      <DependentUpon>dbsRandevulu.xsd</DependentUpon>
+    </None>
+    <None Include="dbsSiparis.xsc">
+      <DependentUpon>dbsSiparis.xsd</DependentUpon>
+    </None>
+    <None Include="dbsSiparis.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbsSiparis.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbsSiparis.xss">
+      <DependentUpon>dbsSiparis.xsd</DependentUpon>
+    </None>
+    <None Include="dbsTakipte.xsc">
+      <DependentUpon>dbsTakipte.xsd</DependentUpon>
+    </None>
+    <None Include="dbsTakipte.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbsTakipte.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbsTakipte.xss">
+      <DependentUpon>dbsTakipte.xsd</DependentUpon>
+    </None>
+    <None Include="dbsTeslimEdilmis.xsc">
+      <DependentUpon>dbsTeslimEdilmis.xsd</DependentUpon>
+    </None>
+    <None Include="dbsTeslimEdilmis.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbsTeslimEdilmis.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbsTeslimEdilmis.xss">
+      <DependentUpon>dbsTeslimEdilmis.xsd</DependentUpon>
+    </None>
+    <None Include="DolumSayacListeDS.xsc">
+      <DependentUpon>DolumSayacListeDS.xsd</DependentUpon>
+    </None>
+    <None Include="DolumSayacListeDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DolumSayacListeDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DolumSayacListeDS.xss">
+      <DependentUpon>DolumSayacListeDS.xsd</DependentUpon>
+    </None>
+    <None Include="dsDestinasyon.xsc">
+      <DependentUpon>dsDestinasyon.xsd</DependentUpon>
+    </None>
+    <None Include="dsDestinasyon.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsDestinasyon.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsDestinasyon.xss">
+      <DependentUpon>dsDestinasyon.xsd</DependentUpon>
+    </None>
+    <None Include="dsGunlukToplamlar.xsc">
+      <DependentUpon>dsGunlukToplamlar.xsd</DependentUpon>
+    </None>
+    <None Include="dsGunlukToplamlar.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsGunlukToplamlar.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsGunlukToplamlar.xss">
+      <DependentUpon>dsGunlukToplamlar.xsd</DependentUpon>
+    </None>
+    <None Include="dsTeslimEkstra.xsc">
+      <DependentUpon>dsTeslimEkstra.xsd</DependentUpon>
+    </None>
+    <None Include="dsTeslimEkstra.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsTeslimEkstra.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsTeslimEkstra.xss">
+      <DependentUpon>dsTeslimEkstra.xsd</DependentUpon>
+    </None>
+    <None Include="dsTeslimEkstraListe.xsc">
+      <DependentUpon>dsTeslimEkstraListe.xsd</DependentUpon>
+    </None>
+    <None Include="dsTeslimEkstraListe.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsTeslimEkstraListe.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsTeslimEkstraListe.xss">
+      <DependentUpon>dsTeslimEkstraListe.xsd</DependentUpon>
+    </None>
+    <None Include="GemidenGemiyeListesi.xsc">
+      <DependentUpon>GemidenGemiyeListesi.xsd</DependentUpon>
+    </None>
+    <None Include="GemidenGemiyeListesi.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GemidenGemiyeListesi.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GemidenGemiyeListesi.xss">
+      <DependentUpon>GemidenGemiyeListesi.xsd</DependentUpon>
+    </None>
+    <None Include="GercekDataDataSet.xsc">
+      <DependentUpon>GercekDataDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GercekDataDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GercekDataDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GercekDataDataSet.xss">
+      <DependentUpon>GercekDataDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GunlukRaporDataSet.xsc">
+      <DependentUpon>GunlukRaporDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GunlukRaporDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GunlukRaporDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GunlukRaporDataSet.xss">
+      <DependentUpon>GunlukRaporDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="IssuSiparisDBDataSet.xsc">
+      <DependentUpon>IssuSiparisDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="IssuSiparisDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>IssuSiparisDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="IssuSiparisDBDataSet.xss">
+      <DependentUpon>IssuSiparisDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="IssuSiparisDBDataSet1.xsc">
+      <DependentUpon>IssuSiparisDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="IssuSiparisDBDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>IssuSiparisDBDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="IssuSiparisDBDataSet1.xss">
+      <DependentUpon>IssuSiparisDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\IssuSiparisDBEntities.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="prRakipListesi.xsc">
+      <DependentUpon>prRakipListesi.xsd</DependentUpon>
+    </None>
+    <None Include="prRakipListesi.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>prRakipListesi.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="prRakipListesi.xss">
+      <DependentUpon>prRakipListesi.xsd</DependentUpon>
+    </None>
+    <None Include="RakipListesi.xsc">
+      <DependentUpon>RakipListesi.xsd</DependentUpon>
+    </None>
+    <None Include="RakipListesi.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RakipListesi.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RakipListesi.xss">
+      <DependentUpon>RakipListesi.xsd</DependentUpon>
+    </None>
+    <None Include="YakitDolumListeDS.xsc">
+      <DependentUpon>YakitDolumListeDS.xsd</DependentUpon>
+    </None>
+    <None Include="YakitDolumListeDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>YakitDolumListeDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="YakitDolumListeDS.xss">
+      <DependentUpon>YakitDolumListeDS.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="IssuSiparisDB.sql" />
+    <None Include="Resources\issu_logo.png" />
+    <Content Include="sailor.ico" />
+    <Content Include="SQL Scripts\dbo.Barge.Table.sql" />
+    <Content Include="SQL Scripts\dbo.BargeFisi.Table.sql" />
+    <Content Include="SQL Scripts\dbo.GostergeBilgi.Table.sql" />
+    <Content Include="SQL Scripts\dbo.GunlukNot.Table.sql" />
+    <Content Include="SQL Scripts\dbo.KaraListe.Table.sql" />
+    <Content Include="SQL Scripts\dbo.Kullanicilar.Table.sql" />
+    <Content Include="SQL Scripts\dbo.NakitOdeme.Table.sql" />
+    <Content Include="SQL Scripts\dbo.prBargeFisiDelete.StoredProcedure.sql" />
+    <Content Include="SQL Scripts\dbo.prBargeFisiInsert.StoredProcedure.sql" />
+    <Content Include="SQL Scripts\dbo.prBargeFisiUpdate.StoredProcedure.sql" />
+    <Content Include="SQL Scripts\dbo.prBargeGunlukSuVeYakit.StoredProcedure.sql" />
+    <Content Include="SQL Scripts\dbo.prBargeListe.StoredProcedure.sql" />
+    <Content Include="SQL Scripts\dbo.prBargeListe2.StoredProcedure.sql" />
+    <Content Include="SQL Scripts\dbo.prBargeListe3.StoredProcedure.sql" />
+    <Content Include="SQL Scripts\dbo.prBargeListe4.StoredProcedure.sql" />
+    <Content Include="SQL Scripts\dbo.prBargeListe5.StoredProcedure.sql" />
+    <Content Include="SQL Scripts\dbo.prBargeListe6.StoredProcedure.sql" />
+    <Content Include="SQL Scripts\dbo.prDolumGosterge.StoredProcedure.sql" />
+    <Content Include="SQL Scripts\dbo.prErtesiGuneAktar.StoredProcedure.sql" />
+    <Content Include="SQL Scripts\dbo.prFix.StoredProcedure.sql" />
+    <Content Include="SQL Scripts\dbo.prfixSayacDolum.StoredProcedure.sql" />
+    <Content Include="SQL Scripts\dbo.prfixSuDolum.StoredProcedure.sql" />
+    <Content Include="SQL Scripts\dbo.prfixTeslim.StoredProcedure.sql" />
+    <Content Include="SQL Scripts\dbo.prfixYakit.StoredProcedure.sql" />
+    <Content Include="SQL Scripts\dbo.prGemidenGemiyeIkmalListesi.StoredProcedure.sql" />
+    <Content Include="SQL Scripts\dbo.prGunlukBilgiGuncelle.StoredProcedure.sql" />
+    <Content Include="SQL Scripts\dbo.prGunlukBilgiInsert.StoredProcedure.sql" />
+    <Content Include="SQL Scripts\dbo.prGunlukNotKayit.StoredProcedure.sql" />
+    <Content Include="SQL Scripts\dbo.prGunlukRapor.StoredProcedure.sql" />
+    <Content Include="SQL Scripts\dbo.prGunlukRaporSiparis.StoredProcedure.sql" />
+    <Content Include="SQL Scripts\dbo.prGunlukRaporTakip.StoredProcedure.sql" />
+    <Content Include="SQL Scripts\dbo.prGunlukRaporTeslim.StoredProcedure.sql" />
+    <Content Include="SQL Scripts\dbo.prGunlukSatislar.StoredProcedure.sql" />
+    <Content Include="SQL Scripts\dbo.prHaftalikListe1.StoredProcedure.sql" />
+    <Content Include="SQL Scripts\dbo.prInsertSiparis.StoredProcedure.sql" />
+    <Content Include="SQL Scripts\dbo.prNakitOdemeListe.StoredProcedure.sql" />
+    <Content Include="SQL Scripts\dbo.prRakipListesi.StoredProcedure.sql" />
+    <Content Include="SQL Scripts\dbo.prRandevuListe.StoredProcedure.sql" />
+    <Content Include="SQL Scripts\dbo.prSayacDelete.StoredProcedure.sql" />
+    <Content Include="SQL Scripts\dbo.prSayacInsert.StoredProcedure.sql" />
+    <Content Include="SQL Scripts\dbo.prSayacUpdate.StoredProcedure.sql" />
+    <Content Include="SQL Scripts\dbo.prSiparisInsert.StoredProcedure.sql" />
+    <Content Include="SQL Scripts\dbo.prSiparisUpdate.StoredProcedure.sql" />
+    <Content Include="SQL Scripts\dbo.prSuDolumDelete.StoredProcedure.sql" />
+    <Content Include="SQL Scripts\dbo.prSuDolumInsert.StoredProcedure.sql" />
+    <Content Include="SQL Scripts\dbo.prSuDolumUpdate.StoredProcedure.sql" />
+    <Content Include="SQL Scripts\dbo.prTakipListe.StoredProcedure.sql" />
+    <Content Include="SQL Scripts\dbo.prTeslimDelete.StoredProcedure.sql" />
+    <Content Include="SQL Scripts\dbo.prTeslimInsert.StoredProcedure.sql" />
+    <Content Include="SQL Scripts\dbo.prTeslimListe.StoredProcedure.sql" />
+    <Content Include="SQL Scripts\dbo.prTeslimSil.StoredProcedure.sql" />
+    <Content Include="SQL Scripts\dbo.prTeslimUpdate.StoredProcedure.sql" />
+    <Content Include="SQL Scripts\dbo.prTumGemilerinSatislari.StoredProcedure.sql" />
+    <Content Include="SQL Scripts\dbo.prTumGemilerinSatislariYillik.StoredProcedure.sql" />
+    <Content Include="SQL Scripts\dbo.prUpdateSiparis.StoredProcedure.sql" />
+    <Content Include="SQL Scripts\dbo.prYakitDolumDelete.StoredProcedure.sql" />
+    <Content Include="SQL Scripts\dbo.prYakitDolumInsert.StoredProcedure.sql" />
+    <Content Include="SQL Scripts\dbo.prYakitDolumUpdate.StoredProcedure.sql" />
+    <Content Include="SQL Scripts\dbo.Rakip.Table.sql" />
+    <Content Include="SQL Scripts\dbo.SayacDolum.Table.sql" />
+    <Content Include="SQL Scripts\dbo.Siparis.Table.sql" />
+    <Content Include="SQL Scripts\dbo.SuDevresiBozukGemiler.Table.sql" />
+    <Content Include="SQL Scripts\dbo.SuDolum.Table.sql" />
+    <Content Include="SQL Scripts\dbo.TeslimFisi.Table.sql" />
+    <Content Include="SQL Scripts\dbo.TeslimFisi_old.Table.sql" />
+    <Content Include="SQL Scripts\dbo.udf_Gosterge.UserDefinedFunction.sql" />
+    <Content Include="SQL Scripts\dbo.uf_FirstDateOfMonth.UserDefinedFunction.sql" />
+    <Content Include="SQL Scripts\dbo.uf_LastDayOfTheMonth.UserDefinedFunction.sql" />
+    <Content Include="SQL Scripts\dbo.uf_LastSecondOfDate.UserDefinedFunction.sql" />
+    <Content Include="SQL Scripts\dbo.uf_StatusBarBilgi.UserDefinedFunction.sql" />
+    <Content Include="SQL Scripts\dbo.vBargeBilgi.View.sql" />
+    <Content Include="SQL Scripts\dbo.vNakitListe.View.sql" />
+    <Content Include="SQL Scripts\dbo.vRandevulu.View.sql" />
+    <Content Include="SQL Scripts\dbo.vTakipte.View.sql" />
+    <Content Include="SQL Scripts\dbo.vTeslimEdilmis.View.sql" />
+    <Content Include="SQL Scripts\dbo.YakitDolum.Table.sql" />
+    <Content Include="SQL Scripts\DF_GostergeBilgi_AnlikYakit.Default.sql" />
+    <Content Include="SQL Scripts\DF_GostergeBilgi_GidilenGemi.Default.sql" />
+    <Content Include="SQL Scripts\DF_GostergeBilgi_MevcutSu.Default.sql" />
+    <Content Include="SQL Scripts\DF_GostergeBilgi_MevcutYakit.Default.sql" />
+    <Content Include="SQL Scripts\DF_GostergeBilgi_Tarih.Default.sql" />
+    <Content Include="SQL Scripts\DF_NakitOdeme_Tarih.Default.sql" />
+    <Content Include="SQL Scripts\DF_SayacDolum_AlinanSuFarki.Default.sql" />
+    <Content Include="SQL Scripts\DF_SuDolum_Miktar.Default.sql" />
+    <Content Include="SQL Scripts\DF_SuDolum_Tarih.Default.sql" />
+    <Content Include="SQL Scripts\DF_YakitDolum_Miktar.Default.sql" />
+    <Content Include="SQL Scripts\DF_YakitDolum_Tarih.Default.sql" />
+    <Content Include="SQL Scripts\DF__GostergeBilgi__Kalan__5B78929E.Default.sql" />
+    <Content Include="SQL Scripts\DF__Siparis__KayitTa__267ABA7A.Default.sql" />
+    <Content Include="SQL Scripts\DF__Siparis__OnSipar__25869641.Default.sql" />
+    <Content Include="SQL Scripts\DF__TeslimFis__Alina__182C9B23.Default.sql" />
+    <Content Include="SQL Scripts\DF__TeslimFis__Harca__173876EA.Default.sql" />
+    <Content Include="SQL Scripts\DF__TeslimFis__Veril__164452B1.Default.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

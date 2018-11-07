@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dbsRandevulu" targetNamespace="http://tempuri.org/dbsRandevulu.xsd" xmlns:mstns="http://tempuri.org/dbsRandevulu.xsd" xmlns="http://tempuri.org/dbsRandevulu.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="IssuSiparisDBConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="IssuSiparisDBConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.IssuSiparis.Properties.Settings.GlobalReference.Default.IssuSiparisDBConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vRandevuluTableAdapter" GeneratorDataComponentClassName="vRandevuluTableAdapter" Name="vRandevulu" UserDataComponentName="vRandevuluTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="IssuSiparisDBConnectionString (Settings)" DbObjectName="IssuSiparisDB.dbo.vRandevulu" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Barge, Aciklama, Miktar, [Teslim Yeri], [Teslim Saati], [Teslim Tarihi], [Barge Adi], [Gemi Adi], MusteriAdi, OnSiparis, TeslimTarihi, EK1, SiparisID FROM vRandevulu</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Barge" DataSetColumn="Barge" />
+              <Mapping SourceColumn="Aciklama" DataSetColumn="Aciklama" />
+              <Mapping SourceColumn="Miktar" DataSetColumn="Miktar" />
+              <Mapping SourceColumn="Teslim Yeri" DataSetColumn="Teslim Yeri" />
+              <Mapping SourceColumn="Teslim Saati" DataSetColumn="Teslim Saati" />
+              <Mapping SourceColumn="Teslim Tarihi" DataSetColumn="Teslim Tarihi" />
+              <Mapping SourceColumn="OnSiparis" DataSetColumn="OnSiparis" />
+              <Mapping SourceColumn="Barge Adi" DataSetColumn="Barge Adi" />
+              <Mapping SourceColumn="Gemi Adi" DataSetColumn="Gemi Adi" />
+              <Mapping SourceColumn="MusteriAdi" DataSetColumn="MusteriAdi" />
+              <Mapping SourceColumn="TeslimTarihi" DataSetColumn="TeslimTarihi" />
+              <Mapping SourceColumn="SiparisID" DataSetColumn="SiparisID" />
+              <Mapping SourceColumn="EK1" DataSetColumn="EK1" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dbsRandevulu" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="dbsRandevulu" msprop:Generator_UserDSName="dbsRandevulu">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vRandevulu" msprop:Generator_TableClassName="vRandevuluDataTable" msprop:Generator_TableVarName="tablevRandevulu" msprop:Generator_TablePropName="vRandevulu" msprop:Generator_RowDeletingName="vRandevuluRowDeleting" msprop:Generator_UserTableName="vRandevulu" msprop:Generator_RowChangingName="vRandevuluRowChanging" msprop:Generator_RowEvHandlerName="vRandevuluRowChangeEventHandler" msprop:Generator_RowDeletedName="vRandevuluRowDeleted" msprop:Generator_RowEvArgName="vRandevuluRowChangeEvent" msprop:Generator_RowChangedName="vRandevuluRowChanged" msprop:Generator_RowClassName="vRandevuluRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Barge" msprop:Generator_ColumnVarNameInTable="columnBarge" msprop:Generator_ColumnPropNameInRow="Barge" msprop:Generator_ColumnPropNameInTable="BargeColumn" msprop:Generator_UserColumnName="Barge" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="7" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Aciklama" msprop:Generator_ColumnVarNameInTable="columnAciklama" msprop:Generator_ColumnPropNameInRow="Aciklama" msprop:Generator_ColumnPropNameInTable="AciklamaColumn" msprop:Generator_UserColumnName="Aciklama" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Miktar" msprop:Generator_ColumnVarNameInTable="columnMiktar" msprop:Generator_ColumnPropNameInRow="Miktar" msprop:Generator_ColumnPropNameInTable="MiktarColumn" msprop:Generator_UserColumnName="Miktar" type="xs:int" minOccurs="0" />
+              <xs:element name="Teslim_x0020_Yeri" msprop:Generator_ColumnVarNameInTable="columnTeslim_Yeri" msprop:Generator_ColumnPropNameInRow="Teslim_Yeri" msprop:Generator_ColumnPropNameInTable="Teslim_YeriColumn" msprop:Generator_UserColumnName="Teslim Yeri" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Teslim_x0020_Saati" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTeslim_Saati" msprop:Generator_ColumnPropNameInRow="Teslim_Saati" msprop:Generator_ColumnPropNameInTable="Teslim_SaatiColumn" msprop:Generator_UserColumnName="Teslim Saati" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Teslim_x0020_Tarihi" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTeslim_Tarihi" msprop:Generator_ColumnPropNameInRow="Teslim_Tarihi" msprop:Generator_ColumnPropNameInTable="Teslim_TarihiColumn" msprop:Generator_UserColumnName="Teslim Tarihi" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OnSiparis" msprop:Generator_ColumnVarNameInTable="columnOnSiparis" msprop:Generator_ColumnPropNameInRow="OnSiparis" msprop:Generator_ColumnPropNameInTable="OnSiparisColumn" msprop:Generator_UserColumnName="OnSiparis" type="xs:boolean" />
+              <xs:element name="Barge_x0020_Adi" msprop:Generator_ColumnVarNameInTable="columnBarge_Adi" msprop:Generator_ColumnPropNameInRow="Barge_Adi" msprop:Generator_ColumnPropNameInTable="Barge_AdiColumn" msprop:Generator_UserColumnName="Barge Adi" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Gemi_x0020_Adi" msprop:Generator_ColumnVarNameInTable="columnGemi_Adi" msprop:Generator_ColumnPropNameInRow="Gemi_Adi" msprop:Generator_ColumnPropNameInTable="Gemi_AdiColumn" msprop:Generator_UserColumnName="Gemi Adi" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MusteriAdi" msprop:Generator_ColumnVarNameInTable="columnMusteriAdi" msprop:Generator_ColumnPropNameInRow="MusteriAdi" msprop:Generator_ColumnPropNameInTable="MusteriAdiColumn" msprop:Generator_UserColumnName="MusteriAdi" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TeslimTarihi" msprop:Generator_ColumnVarNameInTable="columnTeslimTarihi" msprop:Generator_ColumnPropNameInRow="TeslimTarihi" msprop:Generator_ColumnPropNameInTable="TeslimTarihiColumn" msprop:Generator_UserColumnName="TeslimTarihi" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="SiparisID" msprop:Generator_ColumnVarNameInTable="columnSiparisID" msprop:Generator_ColumnPropNameInRow="SiparisID" msprop:Generator_ColumnPropNameInTable="SiparisIDColumn" msprop:Generator_UserColumnName="SiparisID" type="xs:int" />
+              <xs:element name="EK1" msprop:Generator_ColumnVarNameInTable="columnEK1" msprop:Generator_ColumnPropNameInRow="EK1" msprop:Generator_ColumnPropNameInTable="EK1Column" msprop:Generator_UserColumnName="EK1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vRandevulu" />
+      <xs:field xpath="mstns:SiparisID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

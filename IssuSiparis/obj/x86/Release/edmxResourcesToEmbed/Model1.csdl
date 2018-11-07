@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ArizaKaydiDBModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="IssuSiparisDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ArizaKaydi" EntityType="ArizaKaydiDBModel.ArizaKaydi" />
+    <EntitySet Name="Barge" EntityType="ArizaKaydiDBModel.Barge" />
+    <AssociationSet Name="FK_ArizaKaydi_Barge" Association="ArizaKaydiDBModel.FK_ArizaKaydi_Barge">
+      <End Role="Barge" EntitySet="Barge" />
+      <End Role="ArizaKaydi" EntitySet="ArizaKaydi" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="ArizaKaydi">
+    <Key>
+      <PropertyRef Name="ArizaiID" />
+    </Key>
+    <Property Name="ArizaiID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BargeID" Type="Int32" Nullable="false" />
+    <Property Name="Baslangic" Type="DateTime" Nullable="false" />
+    <Property Name="Bitis" Type="DateTime" />
+    <Property Name="KayitTarihi" Type="DateTime" />
+    <Property Name="DegisiklikTarihi" Type="DateTime" />
+    <NavigationProperty Name="Barge" Relationship="ArizaKaydiDBModel.FK_ArizaKaydi_Barge" FromRole="ArizaKaydi" ToRole="Barge" />
+  </EntityType>
+  <EntityType Name="Barge">
+    <Key>
+      <PropertyRef Name="BargeID" />
+    </Key>
+    <Property Name="BargeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GemiAdi" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="BargeKodu" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SiraNo" Type="Int32" />
+    <Property Name="YakitKapasite" Type="Int32" />
+    <Property Name="HarcamaSuBasarken" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="HarcamaSeyir" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="HarcamaBekleme" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="YakitMevcudu" Type="Int32" />
+    <Property Name="Tonaj" Type="Int32" />
+    <Property Name="SuMevcudu" Type="Int32" />
+    <Property Name="Saat1Baslangic" Type="Int32" />
+    <Property Name="Saat1Bitis" Type="Int32" />
+    <Property Name="Saat2Baslangic" Type="Int32" />
+    <Property Name="Saat2Bitis" Type="Int32" />
+    <Property Name="Saat3Baslangic" Type="Int32" />
+    <Property Name="Saat3Bitis" Type="Int32" />
+    <Property Name="Saat4Baslangic" Type="Int32" />
+    <Property Name="Saat4Bitis" Type="Int32" />
+    <Property Name="Durumu" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Mevkii" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="KayitTarihi" Type="DateTime" />
+    <Property Name="DegisiklikTarihi" Type="DateTime" />
+    <NavigationProperty Name="ArizaKaydi" Relationship="ArizaKaydiDBModel.FK_ArizaKaydi_Barge" FromRole="Barge" ToRole="ArizaKaydi" />
+  </EntityType>
+  <Association Name="FK_ArizaKaydi_Barge">
+    <End Role="Barge" Type="ArizaKaydiDBModel.Barge" Multiplicity="1" />
+    <End Role="ArizaKaydi" Type="ArizaKaydiDBModel.ArizaKaydi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Barge">
+        <PropertyRef Name="BargeID" />
+      </Principal>
+      <Dependent Role="ArizaKaydi">
+        <PropertyRef Name="BargeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

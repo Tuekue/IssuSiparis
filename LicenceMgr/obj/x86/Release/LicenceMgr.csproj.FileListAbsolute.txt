@@ -1,0 +1,9 @@
+D:\Projects\Denemeler\LicenceMgr\bin\Release\LicenceMgr.exe
+D:\Projects\Denemeler\LicenceMgr\bin\Release\LicenceMgr.pdb
+D:\Projects\Denemeler\LicenceMgr\obj\x86\Release\ResolveAssemblyReference.cache
+D:\Projects\Denemeler\LicenceMgr\obj\x86\Release\LicenceMgr.fLicence.resources
+D:\Projects\Denemeler\LicenceMgr\obj\x86\Release\LicenceMgr.Properties.Resources.resources
+D:\Projects\Denemeler\LicenceMgr\obj\x86\Release\GenerateResource.read.1.tlog
+D:\Projects\Denemeler\LicenceMgr\obj\x86\Release\GenerateResource.write.1.tlog
+D:\Projects\Denemeler\LicenceMgr\obj\x86\Release\LicenceMgr.exe
+D:\Projects\Denemeler\LicenceMgr\obj\x86\Release\LicenceMgr.pdb
