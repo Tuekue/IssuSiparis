@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsDestinasyon" targetNamespace="http://tempuri.org/dsDestinasyon.xsd" xmlns:mstns="http://tempuri.org/dsDestinasyon.xsd" xmlns="http://tempuri.org/dsDestinasyon.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="IssuSiparisDBConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="IssuSiparisDBConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.IssuSiparis.Properties.Settings.GlobalReference.Default.IssuSiparisDBConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DestinasyonTableAdapter" GeneratorDataComponentClassName="DestinasyonTableAdapter" Name="Destinasyon" UserDataComponentName="DestinasyonTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="IssuSiparisDBConnectionString (Settings)" DbObjectName="IssuSiparisDB.dbo.Destinasyon" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT       *
+FROM            Destinasyon</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="YerAdi" DataSetColumn="YerAdi" />
+              <Mapping SourceColumn="IkmalArtim" DataSetColumn="IkmalArtim" />
+              <Mapping SourceColumn="DolumArtim" DataSetColumn="DolumArtim" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsDestinasyon" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="dsDestinasyon" msprop:Generator_UserDSName="dsDestinasyon">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Destinasyon" msprop:Generator_TableClassName="DestinasyonDataTable" msprop:Generator_TableVarName="tableDestinasyon" msprop:Generator_TablePropName="Destinasyon" msprop:Generator_RowDeletingName="DestinasyonRowDeleting" msprop:Generator_UserTableName="Destinasyon" msprop:Generator_RowChangingName="DestinasyonRowChanging" msprop:Generator_RowEvHandlerName="DestinasyonRowChangeEventHandler" msprop:Generator_RowDeletedName="DestinasyonRowDeleted" msprop:Generator_RowEvArgName="DestinasyonRowChangeEvent" msprop:Generator_RowChangedName="DestinasyonRowChanged" msprop:Generator_RowClassName="DestinasyonRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="YerAdi" msprop:Generator_ColumnVarNameInTable="columnYerAdi" msprop:Generator_ColumnPropNameInRow="YerAdi" msprop:Generator_ColumnPropNameInTable="YerAdiColumn" msprop:Generator_UserColumnName="YerAdi">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IkmalArtim" msprop:Generator_ColumnVarNameInTable="columnIkmalArtim" msprop:Generator_ColumnPropNameInRow="IkmalArtim" msprop:Generator_ColumnPropNameInTable="IkmalArtimColumn" msprop:Generator_UserColumnName="IkmalArtim" type="xs:int" />
+              <xs:element name="DolumArtim" msprop:Generator_ColumnVarNameInTable="columnDolumArtim" msprop:Generator_ColumnPropNameInRow="DolumArtim" msprop:Generator_ColumnPropNameInTable="DolumArtimColumn" msprop:Generator_UserColumnName="DolumArtim" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Destinasyon" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

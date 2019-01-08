@@ -41,3 +41,5 @@ D:\Projects\Denemeler\IssuSiparis\obj\x86\Release\IssuSiparis.fGemiArizaGirisi.r
 D:\Projects\Denemeler\IssuSiparis\obj\x86\Release\IssuSiparis.fGemiEvrakTarihi.resources
 D:\Projects\Denemeler\IssuSiparis\obj\x86\Release\IssuSiparis.fTeslimEkstraRapor.resources
 D:\Projects\Denemeler\IssuSiparis\obj\x86\Release\IssuSiparis.fDestinasyon.resources
+D:\Projects\Denemeler\IssuSiparis\obj\x86\Release\IssuSiparis.fArizaliGemiListesi.resources
+D:\Projects\Denemeler\IssuSiparis\obj\x86\Release\IssuSiparis.fAmbarliListesi.resources

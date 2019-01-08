@@ -38,6 +38,15 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -59,15 +68,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fSiparis));
             this.ctmsRandevu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmCagri = new System.Windows.Forms.ToolStripMenuItem();
@@ -104,6 +104,22 @@
             this.tsmTakipSil = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.grdBargeBilgi = new System.Windows.Forms.DataGridView();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SuSiraNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BargeTonaj = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AylikGidilenGemiAdedi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AylikVerilen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ariza = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ortalama = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ambarli = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Yalova = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Kartal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BargeAciklama = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cmtBarge = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.bargeBilgisiGirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -138,6 +154,7 @@
             this.gemidenGemiyeİkmalListesiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.yakıtDolumListesiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sayaçKontrolÇizelgesiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.arızalıGemiListesiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayarlarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tmiDolumMiktar = new System.Windows.Forms.ToolStripMenuItem();
             this.yedeklemeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -199,22 +216,7 @@
             this.statusToplam = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel7 = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusOrtalama = new System.Windows.Forms.ToolStripStatusLabel();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SuSiraNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BargeTonaj = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AylikGidilenGemiAdedi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AylikVerilen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ariza = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ortalama = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ambarli = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Yalova = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Kartal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BargeAciklama = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ambarlıGidişSırasıToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ctmsRandevu.SuspendLayout();
             this.cmtTakip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdTeslim)).BeginInit();
@@ -591,6 +593,147 @@
             this.grdBargeBilgi.Size = new System.Drawing.Size(572, 258);
             this.grdBargeBilgi.TabIndex = 3;
             // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "BargeID";
+            this.Column3.HeaderText = "BargeID";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Visible = false;
+            // 
+            // SuSiraNo
+            // 
+            this.SuSiraNo.HeaderText = "SiraNo";
+            this.SuSiraNo.Name = "SuSiraNo";
+            this.SuSiraNo.ReadOnly = true;
+            this.SuSiraNo.Visible = false;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "GemiAdi";
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.Column4.DefaultCellStyle = dataGridViewCellStyle10;
+            this.Column4.HeaderText = "Gemi Adı";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 150;
+            // 
+            // BargeTonaj
+            // 
+            this.BargeTonaj.DataPropertyName = "Tonaj";
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.BargeTonaj.DefaultCellStyle = dataGridViewCellStyle11;
+            this.BargeTonaj.HeaderText = "Barge Su Tonajı M3";
+            this.BargeTonaj.Name = "BargeTonaj";
+            this.BargeTonaj.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "SuMevcudu";
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column5.DefaultCellStyle = dataGridViewCellStyle12;
+            this.Column5.HeaderText = "Mevcut Su M3";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 75;
+            // 
+            // Column8
+            // 
+            this.Column8.DataPropertyName = "Verilen";
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column8.DefaultCellStyle = dataGridViewCellStyle13;
+            this.Column8.HeaderText = "Verilen Su M3";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            this.Column8.Width = 75;
+            // 
+            // Column23
+            // 
+            this.Column23.DataPropertyName = "GemiAdedi";
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column23.DefaultCellStyle = dataGridViewCellStyle14;
+            this.Column23.HeaderText = "Gidilen Gemi";
+            this.Column23.Name = "Column23";
+            this.Column23.ReadOnly = true;
+            this.Column23.Width = 75;
+            // 
+            // AylikGidilenGemiAdedi
+            // 
+            this.AylikGidilenGemiAdedi.DataPropertyName = "AylikGidilenGemiAdedi";
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.AylikGidilenGemiAdedi.DefaultCellStyle = dataGridViewCellStyle15;
+            this.AylikGidilenGemiAdedi.HeaderText = "Aylik Gidilen Gemi";
+            this.AylikGidilenGemiAdedi.Name = "AylikGidilenGemiAdedi";
+            this.AylikGidilenGemiAdedi.ReadOnly = true;
+            // 
+            // AylikVerilen
+            // 
+            this.AylikVerilen.DataPropertyName = "AylikVerilen";
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.AylikVerilen.DefaultCellStyle = dataGridViewCellStyle16;
+            this.AylikVerilen.HeaderText = "Aylik M3";
+            this.AylikVerilen.Name = "AylikVerilen";
+            this.AylikVerilen.ReadOnly = true;
+            this.AylikVerilen.Width = 75;
+            // 
+            // Ariza
+            // 
+            this.Ariza.DataPropertyName = "Ariza";
+            this.Ariza.HeaderText = "Ariza";
+            this.Ariza.Name = "Ariza";
+            this.Ariza.ReadOnly = true;
+            this.Ariza.Width = 50;
+            // 
+            // Ortalama
+            // 
+            this.Ortalama.DataPropertyName = "Ortalama";
+            this.Ortalama.HeaderText = "Ortalama";
+            this.Ortalama.Name = "Ortalama";
+            this.Ortalama.ReadOnly = true;
+            this.Ortalama.Width = 50;
+            // 
+            // Ambarli
+            // 
+            this.Ambarli.DataPropertyName = "Ambarli";
+            this.Ambarli.HeaderText = "Ambarli";
+            this.Ambarli.Name = "Ambarli";
+            this.Ambarli.ReadOnly = true;
+            this.Ambarli.Width = 50;
+            // 
+            // Yalova
+            // 
+            this.Yalova.DataPropertyName = "Yalova";
+            this.Yalova.HeaderText = "Yalova";
+            this.Yalova.Name = "Yalova";
+            this.Yalova.ReadOnly = true;
+            this.Yalova.Width = 50;
+            // 
+            // Kartal
+            // 
+            this.Kartal.DataPropertyName = "Kartal";
+            this.Kartal.HeaderText = "Kartal";
+            this.Kartal.Name = "Kartal";
+            this.Kartal.ReadOnly = true;
+            this.Kartal.Width = 50;
+            // 
+            // BargeAciklama
+            // 
+            this.BargeAciklama.DataPropertyName = "Durumu";
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.BargeAciklama.DefaultCellStyle = dataGridViewCellStyle17;
+            this.BargeAciklama.HeaderText = "Durum";
+            this.BargeAciklama.Name = "BargeAciklama";
+            this.BargeAciklama.ReadOnly = true;
+            // 
+            // Column24
+            // 
+            this.Column24.DataPropertyName = "Mevkii";
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column24.DefaultCellStyle = dataGridViewCellStyle18;
+            this.Column24.HeaderText = "Mevkii";
+            this.Column24.Name = "Column24";
+            this.Column24.ReadOnly = true;
+            // 
             // cmtBarge
             // 
             this.cmtBarge.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -633,7 +776,7 @@
             this.ayarlarToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(2, 2);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(217, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(309, 24);
             this.menuStrip1.TabIndex = 12;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -775,7 +918,9 @@
             this.denemeToolStripMenuItem,
             this.gemidenGemiyeİkmalListesiToolStripMenuItem,
             this.yakıtDolumListesiToolStripMenuItem,
-            this.sayaçKontrolÇizelgesiToolStripMenuItem});
+            this.sayaçKontrolÇizelgesiToolStripMenuItem,
+            this.arızalıGemiListesiToolStripMenuItem,
+            this.ambarlıGidişSırasıToolStripMenuItem});
             this.raporlarToolStripMenuItem.Name = "raporlarToolStripMenuItem";
             this.raporlarToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
             this.raporlarToolStripMenuItem.Text = "Raporlar";
@@ -863,6 +1008,13 @@
             this.sayaçKontrolÇizelgesiToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
             this.sayaçKontrolÇizelgesiToolStripMenuItem.Text = "Sayaç Kontrol Çizelgesi";
             this.sayaçKontrolÇizelgesiToolStripMenuItem.Click += new System.EventHandler(this.sayaçKontrolÇizelgesiToolStripMenuItem_Click);
+            // 
+            // arızalıGemiListesiToolStripMenuItem
+            // 
+            this.arızalıGemiListesiToolStripMenuItem.Name = "arızalıGemiListesiToolStripMenuItem";
+            this.arızalıGemiListesiToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
+            this.arızalıGemiListesiToolStripMenuItem.Text = "Arızalı Gemi Listesi";
+            this.arızalıGemiListesiToolStripMenuItem.Click += new System.EventHandler(this.arızalıGemiListesiToolStripMenuItem_Click);
             // 
             // ayarlarToolStripMenuItem
             // 
@@ -1556,146 +1708,12 @@
             this.statusOrtalama.Text = "                    0";
             this.statusOrtalama.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // Column3
+            // ambarlıGidişSırasıToolStripMenuItem
             // 
-            this.Column3.DataPropertyName = "BargeID";
-            this.Column3.HeaderText = "BargeID";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Visible = false;
-            // 
-            // SuSiraNo
-            // 
-            this.SuSiraNo.HeaderText = "SiraNo";
-            this.SuSiraNo.Name = "SuSiraNo";
-            this.SuSiraNo.ReadOnly = true;
-            this.SuSiraNo.Visible = false;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "GemiAdi";
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.Column4.DefaultCellStyle = dataGridViewCellStyle10;
-            this.Column4.HeaderText = "Gemi Adı";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 150;
-            // 
-            // BargeTonaj
-            // 
-            this.BargeTonaj.DataPropertyName = "Tonaj";
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.BargeTonaj.DefaultCellStyle = dataGridViewCellStyle11;
-            this.BargeTonaj.HeaderText = "Barge Su Tonajı M3";
-            this.BargeTonaj.Name = "BargeTonaj";
-            this.BargeTonaj.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "SuMevcudu";
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column5.DefaultCellStyle = dataGridViewCellStyle12;
-            this.Column5.HeaderText = "Mevcut Su M3";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 75;
-            // 
-            // Column8
-            // 
-            this.Column8.DataPropertyName = "Verilen";
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column8.DefaultCellStyle = dataGridViewCellStyle13;
-            this.Column8.HeaderText = "Verilen Su M3";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            this.Column8.Width = 75;
-            // 
-            // Column23
-            // 
-            this.Column23.DataPropertyName = "GemiAdedi";
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column23.DefaultCellStyle = dataGridViewCellStyle14;
-            this.Column23.HeaderText = "Gidilen Gemi";
-            this.Column23.Name = "Column23";
-            this.Column23.ReadOnly = true;
-            this.Column23.Width = 75;
-            // 
-            // AylikGidilenGemiAdedi
-            // 
-            this.AylikGidilenGemiAdedi.DataPropertyName = "AylikGidilenGemiAdedi";
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.AylikGidilenGemiAdedi.DefaultCellStyle = dataGridViewCellStyle15;
-            this.AylikGidilenGemiAdedi.HeaderText = "Aylik Gidilen Gemi";
-            this.AylikGidilenGemiAdedi.Name = "AylikGidilenGemiAdedi";
-            this.AylikGidilenGemiAdedi.ReadOnly = true;
-            // 
-            // AylikVerilen
-            // 
-            this.AylikVerilen.DataPropertyName = "AylikVerilen";
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.AylikVerilen.DefaultCellStyle = dataGridViewCellStyle16;
-            this.AylikVerilen.HeaderText = "Aylik M3";
-            this.AylikVerilen.Name = "AylikVerilen";
-            this.AylikVerilen.ReadOnly = true;
-            this.AylikVerilen.Width = 75;
-            // 
-            // Ariza
-            // 
-            this.Ariza.DataPropertyName = "Ariza";
-            this.Ariza.HeaderText = "Ariza";
-            this.Ariza.Name = "Ariza";
-            this.Ariza.ReadOnly = true;
-            this.Ariza.Width = 50;
-            // 
-            // Ortalama
-            // 
-            this.Ortalama.DataPropertyName = "Ortalama";
-            this.Ortalama.HeaderText = "Ortalama";
-            this.Ortalama.Name = "Ortalama";
-            this.Ortalama.ReadOnly = true;
-            this.Ortalama.Width = 50;
-            // 
-            // Ambarli
-            // 
-            this.Ambarli.DataPropertyName = "Ambarli";
-            this.Ambarli.HeaderText = "Ambarli";
-            this.Ambarli.Name = "Ambarli";
-            this.Ambarli.ReadOnly = true;
-            this.Ambarli.Width = 50;
-            // 
-            // Yalova
-            // 
-            this.Yalova.DataPropertyName = "Yalova";
-            this.Yalova.HeaderText = "Yalova";
-            this.Yalova.Name = "Yalova";
-            this.Yalova.ReadOnly = true;
-            this.Yalova.Width = 50;
-            // 
-            // Kartal
-            // 
-            this.Kartal.DataPropertyName = "Kartal";
-            this.Kartal.HeaderText = "Kartal";
-            this.Kartal.Name = "Kartal";
-            this.Kartal.ReadOnly = true;
-            this.Kartal.Width = 50;
-            // 
-            // BargeAciklama
-            // 
-            this.BargeAciklama.DataPropertyName = "Durumu";
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.BargeAciklama.DefaultCellStyle = dataGridViewCellStyle17;
-            this.BargeAciklama.HeaderText = "Durum";
-            this.BargeAciklama.Name = "BargeAciklama";
-            this.BargeAciklama.ReadOnly = true;
-            // 
-            // Column24
-            // 
-            this.Column24.DataPropertyName = "Mevkii";
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column24.DefaultCellStyle = dataGridViewCellStyle18;
-            this.Column24.HeaderText = "Mevkii";
-            this.Column24.Name = "Column24";
-            this.Column24.ReadOnly = true;
+            this.ambarlıGidişSırasıToolStripMenuItem.Name = "ambarlıGidişSırasıToolStripMenuItem";
+            this.ambarlıGidişSırasıToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
+            this.ambarlıGidişSırasıToolStripMenuItem.Text = "Ambarlı Gidiş Sırası";
+            this.ambarlıGidişSırasıToolStripMenuItem.Click += new System.EventHandler(this.ambarlıGidişSırasıToolStripMenuItem_Click);
             // 
             // fSiparis
             // 
@@ -1897,5 +1915,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Kartal;
         private System.Windows.Forms.DataGridViewTextBoxColumn BargeAciklama;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column24;
+        private System.Windows.Forms.ToolStripMenuItem arızalıGemiListesiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ambarlıGidişSırasıToolStripMenuItem;
     }
 }

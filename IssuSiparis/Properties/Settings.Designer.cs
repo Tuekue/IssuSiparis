@@ -26,8 +26,8 @@ namespace IssuSiparis.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=localhost;Initial Catalog=IssuSiparisDB;Persist Security Info=True;Us" +
-            "er ID=issu_master;Password=Kce1098")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=localhost;Initial Catalog=SIP2018;Persist Security Info=True;User ID=" +
+            "issu_user;Password=Kce1098")]
         public string IssuSiparisDBConnectionString {
             get {
                 return ((string)(this["IssuSiparisDBConnectionString"]));

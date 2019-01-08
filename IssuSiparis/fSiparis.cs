@@ -45,7 +45,7 @@ namespace IssuSiparis
                 mySqlCommand.Connection = connection;
                 mySqlCommand.CommandType = CommandType.StoredProcedure;
                 //parameter.Value = dtpGirişTarihi.Value;
-                mySqlCommand.Parameters.AddWithValue("@fTeslimTarihi", dtpGirişTarihi.Value);
+                mySqlCommand.Parameters.AddWithValue("@fTeslimTarihi", canonicalDate(dtpGirişTarihi.Value));
 
                 myDataAdapter.SelectCommand = mySqlCommand;
                 myDataAdapter.Fill(ds, TableName);
@@ -60,7 +60,10 @@ namespace IssuSiparis
                 cmd.Dispose();
             }
         }
-
+        private string canonicalDate(DateTime tarih)
+        {
+            return tarih.Year + "-" + tarih.Month + "-" + tarih.Day + " " + tarih.Hour + ":" + tarih.Minute + ":00";
+        }
         private void fillDataGrid()
         {
             try
@@ -1253,6 +1256,18 @@ namespace IssuSiparis
         {
             fDestinasyon frmDestinasyon = new fDestinasyon();
             frmDestinasyon.Show();
+        }
+
+        private void arızalıGemiListesiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fArizaliGemiListesi frmArizaliGemiListesi = new fArizaliGemiListesi();
+            frmArizaliGemiListesi.Show();
+        }
+
+        private void ambarlıGidişSırasıToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fAmbarliListesi frmAmbarliListesi = new fAmbarliListesi();
+            frmAmbarliListesi.Show();
         }
     }
 }

@@ -106,6 +106,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DolumSayacListeDS.xsd</DependentUpon>
     </Compile>
+    <Compile Include="dsAmbarliListesi.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsAmbarliListesi.xsd</DependentUpon>
+    </Compile>
     <Compile Include="dsDestinasyon.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -120,6 +125,18 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsTeslimEkstraListe.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="fAmbarliListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fAmbarliListesi.Designer.cs">
+      <DependentUpon>fAmbarliListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fArizaliGemiListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fArizaliGemiListesi.Designer.cs">
+      <DependentUpon>fArizaliGemiListesi.cs</DependentUpon>
     </Compile>
     <Compile Include="fBargeFisi.cs">
       <SubType>Form</SubType>
@@ -383,6 +400,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>IssuSiparisDBDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="IssuSiparisDBDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IssuSiparisDBDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ModifyRegistry.cs" />
     <Compile Include="PasswordHash.cs" />
     <Compile Include="Program.cs" />
@@ -397,6 +419,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>RakipListesi.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Classes\TurkceTarihAdlari.cs" />
+    <Compile Include="YakitDolumListeDS.cs">
+      <DependentUpon>YakitDolumListeDS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="YakitDolumListeDS.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -404,6 +431,12 @@
     </Compile>
     <EmbeddedResource Include="AylikSatislar.resx">
       <DependentUpon>AylikSatislar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fAmbarliListesi.resx">
+      <DependentUpon>fAmbarliListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fArizaliGemiListesi.resx">
+      <DependentUpon>fArizaliGemiListesi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fBargeFisi.resx">
       <DependentUpon>fBargeFisi.cs</DependentUpon>
@@ -499,8 +532,10 @@
     <EmbeddedResource Include="fYakitListe.resx">
       <DependentUpon>fYakitListe.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Report4.rdlc" />
+    <EmbeddedResource Include="Reports\AmbarliListesi.rdlc" />
+    <EmbeddedResource Include="Reports\RakipBilgileriCizelgesi.rdlc" />
     <EmbeddedResource Include="Reports\DolumSayacListesi.rdlc" />
+    <EmbeddedResource Include="Reports\GemiArizaListesi.rdlc" />
     <EmbeddedResource Include="Reports\GemidenGemiyeIkmalListesi.rdlc" />
     <EmbeddedResource Include="Reports\NakitOdemeRaporu.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -513,15 +548,11 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Report1.rdlc" />
-    <EmbeddedResource Include="Report2.rdlc" />
-    <EmbeddedResource Include="Report3.rdlc" />
     <EmbeddedResource Include="Reports\DevresiBozukRapor.rdlc" />
-    <EmbeddedResource Include="Reports\RakipBilgileriListesi.rdlc" />
-    <EmbeddedResource Include="Reports\Report1.rdlc" />
-    <EmbeddedResource Include="Reports\Report2.rdlc" />
+    <EmbeddedResource Include="Reports\GunlukRapor.rdlc" />
+    <EmbeddedResource Include="Reports\Karaliste.rdlc" />
     <EmbeddedResource Include="Reports\TeslimEkstra.rdlc" />
-    <EmbeddedResource Include="Reports\YakitDolumListesi.rdlc" />
+    <EmbeddedResource Include="Reports\YakitDolum.rdlc" />
     <None Include="app.config" />
     <None Include="BargeListDataSet.xsc">
       <DependentUpon>BargeListDataSet.xsd</DependentUpon>
@@ -633,6 +664,17 @@
     <None Include="DolumSayacListeDS.xss">
       <DependentUpon>DolumSayacListeDS.xsd</DependentUpon>
     </None>
+    <None Include="dsAmbarliListesi.xsc">
+      <DependentUpon>dsAmbarliListesi.xsd</DependentUpon>
+    </None>
+    <None Include="dsAmbarliListesi.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsAmbarliListesi.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsAmbarliListesi.xss">
+      <DependentUpon>dsAmbarliListesi.xsd</DependentUpon>
+    </None>
     <None Include="dsDestinasyon.xsc">
       <DependentUpon>dsDestinasyon.xsd</DependentUpon>
     </None>
@@ -731,6 +773,17 @@
     </None>
     <None Include="IssuSiparisDBDataSet1.xss">
       <DependentUpon>IssuSiparisDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="IssuSiparisDBDataSet2.xsc">
+      <DependentUpon>IssuSiparisDBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="IssuSiparisDBDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>IssuSiparisDBDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="IssuSiparisDBDataSet2.xss">
+      <DependentUpon>IssuSiparisDBDataSet2.xsd</DependentUpon>
     </None>
     <None Include="Properties\DataSources\IssuSiparisDBEntities.datasource" />
     <None Include="Properties\Settings.settings">

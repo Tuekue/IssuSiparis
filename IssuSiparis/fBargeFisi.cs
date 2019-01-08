@@ -15,6 +15,17 @@ namespace IssuSiparis
         SqlDataAdapter BargeFisiDA = new SqlDataAdapter();
         DataSet dsBargeFisi = new DataSet();
 
+
+        /* Fiş tipleri: 
+         * 
+            1 Teslim (Su satışı)
+            2 İkmal (Su Alımı)
+            3 Dolum (Başka gemiye su verme)
+            4 Yakıt Alım
+            5 Ertesi Gün (Yakıt harcama)
+         * 
+         */
+
         public fBargeFisi()
         {
             InitializeComponent();

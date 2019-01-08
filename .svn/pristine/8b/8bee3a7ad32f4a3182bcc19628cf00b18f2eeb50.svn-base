@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ArizaKaydiDBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ArizaKaydiDBModelStoreContainer">
+    <EntitySet Name="ArizaKaydi" EntityType="ArizaKaydiDBModel.Store.ArizaKaydi" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Barge" EntityType="ArizaKaydiDBModel.Store.Barge" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_ArizaKaydi_Barge" Association="ArizaKaydiDBModel.Store.FK_ArizaKaydi_Barge">
+      <End Role="Barge" EntitySet="Barge" />
+      <End Role="ArizaKaydi" EntitySet="ArizaKaydi" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="ArizaKaydi">
+    <Key>
+      <PropertyRef Name="ArizaiID" />
+    </Key>
+    <Property Name="ArizaiID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="BargeID" Type="int" Nullable="false" />
+    <Property Name="Baslangic" Type="datetime" Nullable="false" />
+    <Property Name="Bitis" Type="datetime" />
+    <Property Name="KayitTarihi" Type="datetime" />
+    <Property Name="DegisiklikTarihi" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Barge">
+    <Key>
+      <PropertyRef Name="BargeID" />
+    </Key>
+    <Property Name="BargeID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="GemiAdi" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="BargeKodu" Type="nvarchar" MaxLength="50" />
+    <Property Name="SiraNo" Type="int" />
+    <Property Name="YakitKapasite" Type="int" />
+    <Property Name="HarcamaSuBasarken" Type="decimal" />
+    <Property Name="HarcamaSeyir" Type="decimal" />
+    <Property Name="HarcamaBekleme" Type="decimal" />
+    <Property Name="YakitMevcudu" Type="int" />
+    <Property Name="Tonaj" Type="int" />
+    <Property Name="SuMevcudu" Type="int" />
+    <Property Name="Saat1Baslangic" Type="int" />
+    <Property Name="Saat1Bitis" Type="int" />
+    <Property Name="Saat2Baslangic" Type="int" />
+    <Property Name="Saat2Bitis" Type="int" />
+    <Property Name="Saat3Baslangic" Type="int" />
+    <Property Name="Saat3Bitis" Type="int" />
+    <Property Name="Saat4Baslangic" Type="int" />
+    <Property Name="Saat4Bitis" Type="int" />
+    <Property Name="Durumu" Type="nvarchar" MaxLength="50" />
+    <Property Name="Mevkii" Type="nvarchar" MaxLength="50" />
+    <Property Name="KayitTarihi" Type="datetime" />
+    <Property Name="DegisiklikTarihi" Type="datetime" />
+  </EntityType>
+  <Association Name="FK_ArizaKaydi_Barge">
+    <End Role="Barge" Type="ArizaKaydiDBModel.Store.Barge" Multiplicity="1" />
+    <End Role="ArizaKaydi" Type="ArizaKaydiDBModel.Store.ArizaKaydi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Barge">
+        <PropertyRef Name="BargeID" />
+      </Principal>
+      <Dependent Role="ArizaKaydi">
+        <PropertyRef Name="BargeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
