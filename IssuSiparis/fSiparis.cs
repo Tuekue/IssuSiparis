@@ -28,6 +28,9 @@ namespace IssuSiparis
         {
             InitializeComponent();
             connection.ConnectionString = IssuSiparis.Properties.Settings.Default.IssuSiparisDBConnectionString;
+//            connection.ConnectionString = IssuSiparis.Properties.Settings.Default.SIP2018ConnectionString;
+//            connection.ConnectionString = IssuSiparis.Properties.Settings.Default.SIP2018Local;
+
             fillDataGrid();
             Bugun = DateTime.Today;
         }
@@ -1082,17 +1085,18 @@ namespace IssuSiparis
 
         private void silToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            rtxtGunlukNot.Text = "";
+            rtxtGunlukNot.Clear();
         }
 
         private void getNote()
         {
-            rtxtGunlukNot.Text = "";
-            evrakKontrol();
+            rtxtGunlukNot.Clear();
 
             connection.ConnectionString = IssuSiparis.Properties.Settings.Default.IssuSiparisDBConnectionString;
             string tarih = dtpGirişTarihi.Value.Year + "-" + dtpGirişTarihi.Value.Month + "-" + dtpGirişTarihi.Value.Day;
             string query = "SELECT Aciklama, Tarih FROM GunlukNot WHERE Tarih='" + tarih + "'";
+            string rtfText;
+
             SqlCommand cmdKaydet = new SqlCommand(query, connection);
 
             //cmdKaydet.Parameters.AddWithValue("@pTarih", parentDTP.Value.ToShortDateString());
@@ -1114,9 +1118,17 @@ namespace IssuSiparis
                 connection.Close();
             }
             if (GunlukNotDS.Tables["GunlukNot"].Rows.Count > 0)
-                rtxtGunlukNot.AppendText(GunlukNotDS.Tables["GunlukNot"].Rows[0]["Aciklama"].ToString());
-            //else
-            //    rtxtGunlukNot.Text = "";
+            {
+                rtfText = rtxtGunlukNot.Text + GunlukNotDS.Tables["GunlukNot"].Rows[0]["Aciklama"].ToString();
+                //rtxtGunlukNot.AppendText(rtfText);
+                rtxtGunlukNot.Rtf = GunlukNotDS.Tables["GunlukNot"].Rows[0]["Aciklama"].ToString();
+                //                rtxtGunlukNot.AppendText(GunlukNotDS.Tables["GunlukNot"].Rows[0]["Aciklama"].ToString());
+                //else
+                //    rtxtGunlukNot.Text = "";
+
+            }
+
+            evrakKontrol();
         }
 
         private void rtxtGunlukNot_Enter(object sender, EventArgs e)
@@ -1143,9 +1155,9 @@ namespace IssuSiparis
             SqlDataAdapter evrakDA = new SqlDataAdapter(commandText, connection);
             try
             {
-            if (connection == null && connection.State != ConnectionState.Open)
-                connection.Open();
-            evrakDA.Fill(evrakDS, "EvrakBitisTarih");
+                if (connection == null && connection.State != ConnectionState.Open)
+                    connection.Open();
+                evrakDA.Fill(evrakDS, "EvrakBitisTarih");
             }
             catch (Exception ex)
             {
@@ -1160,9 +1172,10 @@ namespace IssuSiparis
             foreach (DataRow rows in evrakDS.Tables[0].Rows)
             {
 
-                output += rows[0] + " ";
-                
+                output += rows[0] + "\n";
+
             }
+            output += "\n";
             rtxtGunlukNot.AppendText(output.Trim());
         }
 

@@ -26,8 +26,8 @@ namespace IssuSiparis
 
         private void fDestinasyon_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'dsDestinasyon.Destinasyon' table. You can move, or remove it, as needed.
-            this.destinasyonTableAdapter.Fill(this.dsDestinasyon.Destinasyon);
+            // TODO: This line of code loads data into the 'dsDestinasyon.Destinasyon1' table. You can move, or remove it, as needed.
+            this.destinasyon1TableAdapter.Fill(this.dsDestinasyon.Destinasyon1);
 
         }
     }

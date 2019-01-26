@@ -27,10 +27,45 @@ namespace IssuSiparis.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=localhost;Initial Catalog=SIP2018;Persist Security Info=True;User ID=" +
-            "issu_user;Password=Kce1098")]
+            "issu_user;Password=issu2018")]
         public string IssuSiparisDBConnectionString {
             get {
                 return ((string)(this["IssuSiparisDBConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.2.80;Initial Catalog=SIP2018;Persist Security Info=True;User " +
+            "ID=issu_user;Password=issu2018 ")]
+        public string SIP2018ConnectionString {
+            get {
+                return ((string)(this["SIP2018ConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=localhost;Initial Catalog=SIP2018;Persist Security Info=True;User ID=" +
+            "issu_user;Password=issu2018")]
+        public string SIP2018Local {
+            get {
+                return ((string)(this["SIP2018Local"]));
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=localhost;Initial Catalog=IssuSiparisDB;Persist Security Info=True;Us" +
+            "er ID=issu_master;Password=Kce1098")]
+        public string IssuSiparisDB {
+            get {
+                return ((string)(this["IssuSiparisDB"]));
+            }
+            set {
+                this["IssuSiparisDB"] = value;
             }
         }
     }

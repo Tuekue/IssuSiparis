@@ -155,6 +155,7 @@
             this.yakıtDolumListesiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sayaçKontrolÇizelgesiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.arızalıGemiListesiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ambarlıGidişSırasıToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayarlarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tmiDolumMiktar = new System.Windows.Forms.ToolStripMenuItem();
             this.yedeklemeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -216,7 +217,6 @@
             this.statusToplam = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel7 = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusOrtalama = new System.Windows.Forms.ToolStripStatusLabel();
-            this.ambarlıGidişSırasıToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ctmsRandevu.SuspendLayout();
             this.cmtTakip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdTeslim)).BeginInit();
@@ -377,7 +377,7 @@
             this.grdTeslim.ReadOnly = true;
             this.grdTeslim.RowHeadersVisible = false;
             this.grdTeslim.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.grdTeslim.Size = new System.Drawing.Size(700, 433);
+            this.grdTeslim.Size = new System.Drawing.Size(700, 432);
             this.grdTeslim.TabIndex = 0;
             this.grdTeslim.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.grdTeslim_CellMouseDown);
             // 
@@ -590,7 +590,7 @@
             this.grdBargeBilgi.ReadOnly = true;
             this.grdBargeBilgi.RowHeadersVisible = false;
             this.grdBargeBilgi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.grdBargeBilgi.Size = new System.Drawing.Size(572, 258);
+            this.grdBargeBilgi.Size = new System.Drawing.Size(572, 250);
             this.grdBargeBilgi.TabIndex = 3;
             // 
             // Column3
@@ -776,7 +776,7 @@
             this.ayarlarToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(2, 2);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(309, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(217, 24);
             this.menuStrip1.TabIndex = 12;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -1016,6 +1016,13 @@
             this.arızalıGemiListesiToolStripMenuItem.Text = "Arızalı Gemi Listesi";
             this.arızalıGemiListesiToolStripMenuItem.Click += new System.EventHandler(this.arızalıGemiListesiToolStripMenuItem_Click);
             // 
+            // ambarlıGidişSırasıToolStripMenuItem
+            // 
+            this.ambarlıGidişSırasıToolStripMenuItem.Name = "ambarlıGidişSırasıToolStripMenuItem";
+            this.ambarlıGidişSırasıToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
+            this.ambarlıGidişSırasıToolStripMenuItem.Text = "Ambarlı Gidiş Sırası";
+            this.ambarlıGidişSırasıToolStripMenuItem.Click += new System.EventHandler(this.ambarlıGidişSırasıToolStripMenuItem_Click);
+            // 
             // ayarlarToolStripMenuItem
             // 
             this.ayarlarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -1103,7 +1110,7 @@
             this.splitContainer3.Panel2.Controls.Add(this.grdRandevu);
             this.tableLayoutPanel1.SetRowSpan(this.splitContainer3, 2);
             this.splitContainer3.Size = new System.Drawing.Size(700, 866);
-            this.splitContainer3.SplitterDistance = 433;
+            this.splitContainer3.SplitterDistance = 432;
             this.splitContainer3.TabIndex = 25;
             // 
             // grdRandevu
@@ -1151,7 +1158,7 @@
             this.grdRandevu.ReadOnly = true;
             this.grdRandevu.RowHeadersVisible = false;
             this.grdRandevu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.grdRandevu.Size = new System.Drawing.Size(700, 429);
+            this.grdRandevu.Size = new System.Drawing.Size(700, 430);
             this.grdRandevu.TabIndex = 5;
             this.grdRandevu.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.grdRandevu_CellMouseDown);
             // 
@@ -1287,7 +1294,7 @@
             this.splitContainer2.Panel2MinSize = 520;
             this.tableLayoutPanel1.SetRowSpan(this.splitContainer2, 2);
             this.splitContainer2.Size = new System.Drawing.Size(572, 866);
-            this.splitContainer2.SplitterDistance = 342;
+            this.splitContainer2.SplitterDistance = 341;
             this.splitContainer2.TabIndex = 25;
             // 
             // grdTakip
@@ -1335,7 +1342,7 @@
             this.grdTakip.ReadOnly = true;
             this.grdTakip.RowHeadersVisible = false;
             this.grdTakip.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.grdTakip.Size = new System.Drawing.Size(572, 342);
+            this.grdTakip.Size = new System.Drawing.Size(572, 341);
             this.grdTakip.TabIndex = 4;
             this.grdTakip.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.grdTakip_CellMouseDown);
             // 
@@ -1473,8 +1480,8 @@
             this.splitContainer1.Panel2.Controls.Add(this.rtxtGunlukNot);
             this.splitContainer1.Panel2.Controls.Add(this.grdBargeYakit);
             this.splitContainer1.Panel2MinSize = 258;
-            this.splitContainer1.Size = new System.Drawing.Size(572, 520);
-            this.splitContainer1.SplitterDistance = 258;
+            this.splitContainer1.Size = new System.Drawing.Size(572, 521);
+            this.splitContainer1.SplitterDistance = 250;
             this.splitContainer1.TabIndex = 7;
             // 
             // rtxtGunlukNot
@@ -1612,16 +1619,16 @@
             this.statusToplam,
             this.toolStripStatusLabel7,
             this.statusOrtalama});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 877);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 879);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1284, 24);
+            this.statusStrip1.Size = new System.Drawing.Size(1284, 22);
             this.statusStrip1.TabIndex = 25;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(46, 19);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(46, 17);
             this.toolStripStatusLabel1.Text = "Takipte";
             // 
             // statusTakip
@@ -1632,14 +1639,14 @@
                         | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right)
                         | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
             this.statusTakip.Name = "statusTakip";
-            this.statusTakip.Size = new System.Drawing.Size(77, 19);
+            this.statusTakip.Size = new System.Drawing.Size(77, 17);
             this.statusTakip.Text = "                    0";
             this.statusTakip.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // toolStripStatusLabel3
             // 
             this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
-            this.toolStripStatusLabel3.Size = new System.Drawing.Size(65, 19);
+            this.toolStripStatusLabel3.Size = new System.Drawing.Size(65, 17);
             this.toolStripStatusLabel3.Text = "Beklemede";
             // 
             // statusBekleme
@@ -1650,14 +1657,14 @@
                         | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right)
                         | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
             this.statusBekleme.Name = "statusBekleme";
-            this.statusBekleme.Size = new System.Drawing.Size(77, 19);
+            this.statusBekleme.Size = new System.Drawing.Size(77, 17);
             this.statusBekleme.Text = "                    0";
             this.statusBekleme.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // toolStripStatusLabel5
             // 
             this.toolStripStatusLabel5.Name = "toolStripStatusLabel5";
-            this.toolStripStatusLabel5.Size = new System.Drawing.Size(83, 19);
+            this.toolStripStatusLabel5.Size = new System.Drawing.Size(83, 17);
             this.toolStripStatusLabel5.Text = "Teslim Edilmiş";
             // 
             // statusTeslim
@@ -1668,14 +1675,14 @@
                         | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right)
                         | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
             this.statusTeslim.Name = "statusTeslim";
-            this.statusTeslim.Size = new System.Drawing.Size(77, 19);
+            this.statusTeslim.Size = new System.Drawing.Size(77, 17);
             this.statusTeslim.Text = "                    0";
             this.statusTeslim.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // toolStripStatusLabel2
             // 
             this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(81, 19);
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(81, 17);
             this.toolStripStatusLabel2.Text = "Genel Toplam";
             // 
             // statusToplam
@@ -1686,14 +1693,14 @@
                         | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right)
                         | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
             this.statusToplam.Name = "statusToplam";
-            this.statusToplam.Size = new System.Drawing.Size(77, 19);
+            this.statusToplam.Size = new System.Drawing.Size(77, 17);
             this.statusToplam.Text = "                    0";
             this.statusToplam.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // toolStripStatusLabel7
             // 
             this.toolStripStatusLabel7.Name = "toolStripStatusLabel7";
-            this.toolStripStatusLabel7.Size = new System.Drawing.Size(83, 19);
+            this.toolStripStatusLabel7.Size = new System.Drawing.Size(83, 17);
             this.toolStripStatusLabel7.Text = "Ortalama Satış";
             // 
             // statusOrtalama
@@ -1704,16 +1711,9 @@
                         | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right)
                         | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
             this.statusOrtalama.Name = "statusOrtalama";
-            this.statusOrtalama.Size = new System.Drawing.Size(77, 19);
+            this.statusOrtalama.Size = new System.Drawing.Size(77, 17);
             this.statusOrtalama.Text = "                    0";
             this.statusOrtalama.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // ambarlıGidişSırasıToolStripMenuItem
-            // 
-            this.ambarlıGidişSırasıToolStripMenuItem.Name = "ambarlıGidişSırasıToolStripMenuItem";
-            this.ambarlıGidişSırasıToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
-            this.ambarlıGidişSırasıToolStripMenuItem.Text = "Ambarlı Gidiş Sırası";
-            this.ambarlıGidişSırasıToolStripMenuItem.Click += new System.EventHandler(this.ambarlıGidişSırasıToolStripMenuItem_Click);
             // 
             // fSiparis
             // 

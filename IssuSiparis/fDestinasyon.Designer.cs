@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fDestinasyon));
             this.dsDestinasyon = new IssuSiparis.dsDestinasyon();
             this.destinasyonBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.destinasyonTableAdapter = new IssuSiparis.dsDestinasyonTableAdapters.DestinasyonTableAdapter();
             this.tableAdapterManager = new IssuSiparis.dsDestinasyonTableAdapters.TableAdapterManager();
             this.destinasyonBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
@@ -52,6 +51,7 @@
             this.yerAdiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ıkmalArtimDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dolumArtimDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.destinasyon1TableAdapter = new IssuSiparis.dsDestinasyonTableAdapters.Destinasyon1TableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dsDestinasyon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.destinasyonBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.destinasyonBindingNavigator)).BeginInit();
@@ -66,17 +66,13 @@
             // 
             // destinasyonBindingSource
             // 
-            this.destinasyonBindingSource.DataMember = "Destinasyon";
+            this.destinasyonBindingSource.DataMember = "Destinasyon1";
             this.destinasyonBindingSource.DataSource = this.dsDestinasyon;
-            // 
-            // destinasyonTableAdapter
-            // 
-            this.destinasyonTableAdapter.ClearBeforeFill = true;
             // 
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.Connection = null;
+            this.tableAdapterManager.Destinasyon1TableAdapter = this.destinasyon1TableAdapter;
             this.tableAdapterManager.UpdateOrder = IssuSiparis.dsDestinasyonTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // destinasyonBindingNavigator
@@ -246,6 +242,10 @@
             this.dolumArtimDataGridViewTextBoxColumn.HeaderText = "Dolum Artım Miktarı";
             this.dolumArtimDataGridViewTextBoxColumn.Name = "dolumArtimDataGridViewTextBoxColumn";
             // 
+            // destinasyon1TableAdapter
+            // 
+            this.destinasyon1TableAdapter.ClearBeforeFill = true;
+            // 
             // fDestinasyon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -271,7 +271,6 @@
 
         private dsDestinasyon dsDestinasyon;
         private System.Windows.Forms.BindingSource destinasyonBindingSource;
-        private dsDestinasyonTableAdapters.DestinasyonTableAdapter destinasyonTableAdapter;
         private dsDestinasyonTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingNavigator destinasyonBindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
@@ -291,5 +290,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn yerAdiDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ıkmalArtimDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dolumArtimDataGridViewTextBoxColumn;
+        private dsDestinasyonTableAdapters.Destinasyon1TableAdapter destinasyon1TableAdapter;
     }
 }

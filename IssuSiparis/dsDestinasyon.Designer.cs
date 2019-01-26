@@ -24,7 +24,7 @@ namespace IssuSiparis {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class dsDestinasyon : global::System.Data.DataSet {
         
-        private DestinasyonDataTable tableDestinasyon;
+        private Destinasyon1DataTable tableDestinasyon1;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -54,8 +54,8 @@ namespace IssuSiparis {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["Destinasyon"] != null)) {
-                    base.Tables.Add(new DestinasyonDataTable(ds.Tables["Destinasyon"]));
+                if ((ds.Tables["Destinasyon1"] != null)) {
+                    base.Tables.Add(new Destinasyon1DataTable(ds.Tables["Destinasyon1"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace IssuSiparis {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public DestinasyonDataTable Destinasyon {
+        public Destinasyon1DataTable Destinasyon1 {
             get {
-                return this.tableDestinasyon;
+                return this.tableDestinasyon1;
             }
         }
         
@@ -152,8 +152,8 @@ namespace IssuSiparis {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["Destinasyon"] != null)) {
-                    base.Tables.Add(new DestinasyonDataTable(ds.Tables["Destinasyon"]));
+                if ((ds.Tables["Destinasyon1"] != null)) {
+                    base.Tables.Add(new Destinasyon1DataTable(ds.Tables["Destinasyon1"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace IssuSiparis {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableDestinasyon = ((DestinasyonDataTable)(base.Tables["Destinasyon"]));
+            this.tableDestinasyon1 = ((Destinasyon1DataTable)(base.Tables["Destinasyon1"]));
             if ((initTable == true)) {
-                if ((this.tableDestinasyon != null)) {
-                    this.tableDestinasyon.InitVars();
+                if ((this.tableDestinasyon1 != null)) {
+                    this.tableDestinasyon1.InitVars();
                 }
             }
         }
@@ -204,13 +204,13 @@ namespace IssuSiparis {
             this.Namespace = "http://tempuri.org/dsDestinasyon.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableDestinasyon = new DestinasyonDataTable();
-            base.Tables.Add(this.tableDestinasyon);
+            this.tableDestinasyon1 = new Destinasyon1DataTable();
+            base.Tables.Add(this.tableDestinasyon1);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeDestinasyon() {
+        private bool ShouldSerializeDestinasyon1() {
             return false;
         }
         
@@ -270,14 +270,14 @@ namespace IssuSiparis {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void DestinasyonRowChangeEventHandler(object sender, DestinasyonRowChangeEvent e);
+        public delegate void Destinasyon1RowChangeEventHandler(object sender, Destinasyon1RowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class DestinasyonDataTable : global::System.Data.TypedTableBase<DestinasyonRow> {
+        public partial class Destinasyon1DataTable : global::System.Data.TypedTableBase<Destinasyon1Row> {
             
             private global::System.Data.DataColumn columnid;
             
@@ -289,8 +289,8 @@ namespace IssuSiparis {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DestinasyonDataTable() {
-                this.TableName = "Destinasyon";
+            public Destinasyon1DataTable() {
+                this.TableName = "Destinasyon1";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -298,7 +298,7 @@ namespace IssuSiparis {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal DestinasyonDataTable(global::System.Data.DataTable table) {
+            internal Destinasyon1DataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -315,7 +315,7 @@ namespace IssuSiparis {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected DestinasyonDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected Destinasyon1DataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -363,55 +363,55 @@ namespace IssuSiparis {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DestinasyonRow this[int index] {
+            public Destinasyon1Row this[int index] {
                 get {
-                    return ((DestinasyonRow)(this.Rows[index]));
+                    return ((Destinasyon1Row)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event DestinasyonRowChangeEventHandler DestinasyonRowChanging;
+            public event Destinasyon1RowChangeEventHandler Destinasyon1RowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event DestinasyonRowChangeEventHandler DestinasyonRowChanged;
+            public event Destinasyon1RowChangeEventHandler Destinasyon1RowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event DestinasyonRowChangeEventHandler DestinasyonRowDeleting;
+            public event Destinasyon1RowChangeEventHandler Destinasyon1RowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event DestinasyonRowChangeEventHandler DestinasyonRowDeleted;
+            public event Destinasyon1RowChangeEventHandler Destinasyon1RowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddDestinasyonRow(DestinasyonRow row) {
+            public void AddDestinasyon1Row(Destinasyon1Row row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DestinasyonRow AddDestinasyonRow(string YerAdi, int IkmalArtim, int DolumArtim) {
-                DestinasyonRow rowDestinasyonRow = ((DestinasyonRow)(this.NewRow()));
+            public Destinasyon1Row AddDestinasyon1Row(string YerAdi, int IkmalArtim, int DolumArtim) {
+                Destinasyon1Row rowDestinasyon1Row = ((Destinasyon1Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         YerAdi,
                         IkmalArtim,
                         DolumArtim};
-                rowDestinasyonRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowDestinasyonRow);
-                return rowDestinasyonRow;
+                rowDestinasyon1Row.ItemArray = columnValuesArray;
+                this.Rows.Add(rowDestinasyon1Row);
+                return rowDestinasyon1Row;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DestinasyonRow FindByid(int id) {
-                return ((DestinasyonRow)(this.Rows.Find(new object[] {
+            public Destinasyon1Row FindByid(int id) {
+                return ((Destinasyon1Row)(this.Rows.Find(new object[] {
                             id})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                DestinasyonDataTable cln = ((DestinasyonDataTable)(base.Clone()));
+                Destinasyon1DataTable cln = ((Destinasyon1DataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -419,7 +419,7 @@ namespace IssuSiparis {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new DestinasyonDataTable();
+                return new Destinasyon1DataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -458,28 +458,28 @@ namespace IssuSiparis {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DestinasyonRow NewDestinasyonRow() {
-                return ((DestinasyonRow)(this.NewRow()));
+            public Destinasyon1Row NewDestinasyon1Row() {
+                return ((Destinasyon1Row)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new DestinasyonRow(builder);
+                return new Destinasyon1Row(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(DestinasyonRow);
+                return typeof(Destinasyon1Row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.DestinasyonRowChanged != null)) {
-                    this.DestinasyonRowChanged(this, new DestinasyonRowChangeEvent(((DestinasyonRow)(e.Row)), e.Action));
+                if ((this.Destinasyon1RowChanged != null)) {
+                    this.Destinasyon1RowChanged(this, new Destinasyon1RowChangeEvent(((Destinasyon1Row)(e.Row)), e.Action));
                 }
             }
             
@@ -487,8 +487,8 @@ namespace IssuSiparis {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.DestinasyonRowChanging != null)) {
-                    this.DestinasyonRowChanging(this, new DestinasyonRowChangeEvent(((DestinasyonRow)(e.Row)), e.Action));
+                if ((this.Destinasyon1RowChanging != null)) {
+                    this.Destinasyon1RowChanging(this, new Destinasyon1RowChangeEvent(((Destinasyon1Row)(e.Row)), e.Action));
                 }
             }
             
@@ -496,8 +496,8 @@ namespace IssuSiparis {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.DestinasyonRowDeleted != null)) {
-                    this.DestinasyonRowDeleted(this, new DestinasyonRowChangeEvent(((DestinasyonRow)(e.Row)), e.Action));
+                if ((this.Destinasyon1RowDeleted != null)) {
+                    this.Destinasyon1RowDeleted(this, new Destinasyon1RowChangeEvent(((Destinasyon1Row)(e.Row)), e.Action));
                 }
             }
             
@@ -505,14 +505,14 @@ namespace IssuSiparis {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.DestinasyonRowDeleting != null)) {
-                    this.DestinasyonRowDeleting(this, new DestinasyonRowChangeEvent(((DestinasyonRow)(e.Row)), e.Action));
+                if ((this.Destinasyon1RowDeleting != null)) {
+                    this.Destinasyon1RowDeleting(this, new Destinasyon1RowChangeEvent(((Destinasyon1Row)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveDestinasyonRow(DestinasyonRow row) {
+            public void RemoveDestinasyon1Row(Destinasyon1Row row) {
                 this.Rows.Remove(row);
             }
             
@@ -539,7 +539,7 @@ namespace IssuSiparis {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "DestinasyonDataTable";
+                attribute2.FixedValue = "Destinasyon1DataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -583,25 +583,25 @@ namespace IssuSiparis {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class DestinasyonRow : global::System.Data.DataRow {
+        public partial class Destinasyon1Row : global::System.Data.DataRow {
             
-            private DestinasyonDataTable tableDestinasyon;
+            private Destinasyon1DataTable tableDestinasyon1;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal DestinasyonRow(global::System.Data.DataRowBuilder rb) : 
+            internal Destinasyon1Row(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableDestinasyon = ((DestinasyonDataTable)(this.Table));
+                this.tableDestinasyon1 = ((Destinasyon1DataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int id {
                 get {
-                    return ((int)(this[this.tableDestinasyon.idColumn]));
+                    return ((int)(this[this.tableDestinasyon1.idColumn]));
                 }
                 set {
-                    this[this.tableDestinasyon.idColumn] = value;
+                    this[this.tableDestinasyon1.idColumn] = value;
                 }
             }
             
@@ -609,10 +609,10 @@ namespace IssuSiparis {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string YerAdi {
                 get {
-                    return ((string)(this[this.tableDestinasyon.YerAdiColumn]));
+                    return ((string)(this[this.tableDestinasyon1.YerAdiColumn]));
                 }
                 set {
-                    this[this.tableDestinasyon.YerAdiColumn] = value;
+                    this[this.tableDestinasyon1.YerAdiColumn] = value;
                 }
             }
             
@@ -620,10 +620,10 @@ namespace IssuSiparis {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int IkmalArtim {
                 get {
-                    return ((int)(this[this.tableDestinasyon.IkmalArtimColumn]));
+                    return ((int)(this[this.tableDestinasyon1.IkmalArtimColumn]));
                 }
                 set {
-                    this[this.tableDestinasyon.IkmalArtimColumn] = value;
+                    this[this.tableDestinasyon1.IkmalArtimColumn] = value;
                 }
             }
             
@@ -631,10 +631,10 @@ namespace IssuSiparis {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int DolumArtim {
                 get {
-                    return ((int)(this[this.tableDestinasyon.DolumArtimColumn]));
+                    return ((int)(this[this.tableDestinasyon1.DolumArtimColumn]));
                 }
                 set {
-                    this[this.tableDestinasyon.DolumArtimColumn] = value;
+                    this[this.tableDestinasyon1.DolumArtimColumn] = value;
                 }
             }
         }
@@ -643,22 +643,22 @@ namespace IssuSiparis {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class DestinasyonRowChangeEvent : global::System.EventArgs {
+        public class Destinasyon1RowChangeEvent : global::System.EventArgs {
             
-            private DestinasyonRow eventRow;
+            private Destinasyon1Row eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DestinasyonRowChangeEvent(DestinasyonRow row, global::System.Data.DataRowAction action) {
+            public Destinasyon1RowChangeEvent(Destinasyon1Row row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DestinasyonRow Row {
+            public Destinasyon1Row Row {
                 get {
                     return this.eventRow;
                 }
@@ -686,7 +686,7 @@ namespace IssuSiparis.dsDestinasyonTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class DestinasyonTableAdapter : global::System.ComponentModel.Component {
+    public partial class Destinasyon1TableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -700,7 +700,7 @@ namespace IssuSiparis.dsDestinasyonTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public DestinasyonTableAdapter() {
+        public Destinasyon1TableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -797,12 +797,44 @@ namespace IssuSiparis.dsDestinasyonTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Destinasyon";
+            tableMapping.DataSetTable = "Destinasyon1";
             tableMapping.ColumnMappings.Add("id", "id");
             tableMapping.ColumnMappings.Add("YerAdi", "YerAdi");
             tableMapping.ColumnMappings.Add("IkmalArtim", "IkmalArtim");
             tableMapping.ColumnMappings.Add("DolumArtim", "DolumArtim");
             this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Destinasyon] WHERE (([id] = @Original_id) AND ([YerAdi] = @Ori" +
+                "ginal_YerAdi) AND ([IkmalArtim] = @Original_IkmalArtim) AND ([DolumArtim] = @Ori" +
+                "ginal_DolumArtim))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_YerAdi", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "YerAdi", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IkmalArtim", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IkmalArtim", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DolumArtim", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DolumArtim", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Destinasyon] ([YerAdi], [IkmalArtim], [DolumArtim]) VALUES (@Y" +
+                "erAdi, @IkmalArtim, @DolumArtim);\r\nSELECT id, YerAdi, IkmalArtim, DolumArtim FRO" +
+                "M Destinasyon WHERE (id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@YerAdi", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "YerAdi", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IkmalArtim", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IkmalArtim", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DolumArtim", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DolumArtim", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Destinasyon] SET [YerAdi] = @YerAdi, [IkmalArtim] = @IkmalArtim, [DolumArtim] = @DolumArtim WHERE (([id] = @Original_id) AND ([YerAdi] = @Original_YerAdi) AND ([IkmalArtim] = @Original_IkmalArtim) AND ([DolumArtim] = @Original_DolumArtim));
+SELECT id, YerAdi, IkmalArtim, DolumArtim FROM Destinasyon WHERE (id = @id)";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@YerAdi", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "YerAdi", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IkmalArtim", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IkmalArtim", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DolumArtim", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DolumArtim", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_YerAdi", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "YerAdi", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IkmalArtim", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IkmalArtim", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DolumArtim", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DolumArtim", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -818,7 +850,7 @@ namespace IssuSiparis.dsDestinasyonTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT       *\r\nFROM            Destinasyon";
+            this._commandCollection[0].CommandText = "SELECT id, YerAdi, IkmalArtim, DolumArtim FROM dbo.Destinasyon";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -826,7 +858,7 @@ namespace IssuSiparis.dsDestinasyonTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(dsDestinasyon.DestinasyonDataTable dataTable) {
+        public virtual int Fill(dsDestinasyon.Destinasyon1DataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -839,11 +871,146 @@ namespace IssuSiparis.dsDestinasyonTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual dsDestinasyon.DestinasyonDataTable GetData() {
+        public virtual dsDestinasyon.Destinasyon1DataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            dsDestinasyon.DestinasyonDataTable dataTable = new dsDestinasyon.DestinasyonDataTable();
+            dsDestinasyon.Destinasyon1DataTable dataTable = new dsDestinasyon.Destinasyon1DataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(dsDestinasyon.Destinasyon1DataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(dsDestinasyon dataSet) {
+            return this.Adapter.Update(dataSet, "Destinasyon1");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(int Original_id, string Original_YerAdi, int Original_IkmalArtim, int Original_DolumArtim) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id));
+            if ((Original_YerAdi == null)) {
+                throw new global::System.ArgumentNullException("Original_YerAdi");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_YerAdi));
+            }
+            this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_IkmalArtim));
+            this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_DolumArtim));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(string YerAdi, int IkmalArtim, int DolumArtim) {
+            if ((YerAdi == null)) {
+                throw new global::System.ArgumentNullException("YerAdi");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(YerAdi));
+            }
+            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(IkmalArtim));
+            this.Adapter.InsertCommand.Parameters[2].Value = ((int)(DolumArtim));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(string YerAdi, int IkmalArtim, int DolumArtim, int Original_id, string Original_YerAdi, int Original_IkmalArtim, int Original_DolumArtim, int id) {
+            if ((YerAdi == null)) {
+                throw new global::System.ArgumentNullException("YerAdi");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(YerAdi));
+            }
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(IkmalArtim));
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(DolumArtim));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_id));
+            if ((Original_YerAdi == null)) {
+                throw new global::System.ArgumentNullException("Original_YerAdi");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_YerAdi));
+            }
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_IkmalArtim));
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_DolumArtim));
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(id));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(string YerAdi, int IkmalArtim, int DolumArtim, int Original_id, string Original_YerAdi, int Original_IkmalArtim, int Original_DolumArtim) {
+            return this.Update(YerAdi, IkmalArtim, DolumArtim, Original_id, Original_YerAdi, Original_IkmalArtim, Original_DolumArtim, Original_id);
         }
     }
     
@@ -859,6 +1026,8 @@ namespace IssuSiparis.dsDestinasyonTableAdapters {
         
         private UpdateOrderOption _updateOrder;
         
+        private Destinasyon1TableAdapter _destinasyon1TableAdapter;
+        
         private bool _backupDataSetBeforeUpdate;
         
         private global::System.Data.IDbConnection _connection;
@@ -871,6 +1040,20 @@ namespace IssuSiparis.dsDestinasyonTableAdapters {
             }
             set {
                 this._updateOrder = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public Destinasyon1TableAdapter Destinasyon1TableAdapter {
+            get {
+                return this._destinasyon1TableAdapter;
+            }
+            set {
+                this._destinasyon1TableAdapter = value;
             }
         }
         
@@ -893,6 +1076,10 @@ namespace IssuSiparis.dsDestinasyonTableAdapters {
                 if ((this._connection != null)) {
                     return this._connection;
                 }
+                if (((this._destinasyon1TableAdapter != null) 
+                            && (this._destinasyon1TableAdapter.Connection != null))) {
+                    return this._destinasyon1TableAdapter.Connection;
+                }
                 return null;
             }
             set {
@@ -906,6 +1093,9 @@ namespace IssuSiparis.dsDestinasyonTableAdapters {
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
+                if ((this._destinasyon1TableAdapter != null)) {
+                    count = (count + 1);
+                }
                 return count;
             }
         }
@@ -917,6 +1107,15 @@ namespace IssuSiparis.dsDestinasyonTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateUpdatedRows(dsDestinasyon dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
+            if ((this._destinasyon1TableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Destinasyon1.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._destinasyon1TableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             return result;
         }
         
@@ -927,6 +1126,14 @@ namespace IssuSiparis.dsDestinasyonTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateInsertedRows(dsDestinasyon dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
+            if ((this._destinasyon1TableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Destinasyon1.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._destinasyon1TableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             return result;
         }
         
@@ -937,6 +1144,14 @@ namespace IssuSiparis.dsDestinasyonTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateDeletedRows(dsDestinasyon dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
+            if ((this._destinasyon1TableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Destinasyon1.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._destinasyon1TableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             return result;
         }
         
@@ -976,6 +1191,11 @@ namespace IssuSiparis.dsDestinasyonTableAdapters {
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
+            if (((this._destinasyon1TableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._destinasyon1TableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
+                        "tring.");
+            }
             global::System.Data.IDbConnection workConnection = this.Connection;
             if ((workConnection == null)) {
                 throw new global::System.ApplicationException("TableAdapterManager contains no connection information. Set each TableAdapterMana" +
@@ -1008,6 +1228,15 @@ namespace IssuSiparis.dsDestinasyonTableAdapters {
             try {
                 // ---- Prepare for update -----------
                 //
+                if ((this._destinasyon1TableAdapter != null)) {
+                    revertConnections.Add(this._destinasyon1TableAdapter, this._destinasyon1TableAdapter.Connection);
+                    this._destinasyon1TableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._destinasyon1TableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._destinasyon1TableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._destinasyon1TableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._destinasyon1TableAdapter.Adapter);
+                    }
+                }
                 // 
                 //---- Perform updates -----------
                 //
@@ -1065,6 +1294,10 @@ namespace IssuSiparis.dsDestinasyonTableAdapters {
             finally {
                 if (workConnOpened) {
                     workConnection.Close();
+                }
+                if ((this._destinasyon1TableAdapter != null)) {
+                    this._destinasyon1TableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._destinasyon1TableAdapter]));
+                    this._destinasyon1TableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];
